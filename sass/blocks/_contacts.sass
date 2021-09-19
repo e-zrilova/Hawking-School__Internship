@@ -1,0 +1,48 @@
+.contacts
+  background-color: $dark
+  &__wrapper
+    max-width: 1142px
+    display: flex
+    justify-content: space-between
+    margin: auto
+  &__title
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 64px;
+    color: $light
+    margin-top: 62px
+    margin-bottom: 64px
+  &__info
+    margin-bottom: 45px
+    display: flex
+    align-items: center
+    max-width: 274px
+  &__email
+    display: flex
+    align-items: center
+    color: $light
+  &__adress::before
+    content: url("../../img/map.svg")
+    margin-right: 28px
+  &__phone::before
+    content: url("../../img/phone.svg")
+    margin-right: 28px
+  &__email::before
+    content: url("../../img/mail.svg")
+    margin-right: 28px
+.info__wrapper
+    display: flex
+    flex-direction: column
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: $light
+.map
+  width: 749px
+  height: 463px
+  background: #000
+  overflow: hidden
