@@ -14,7 +14,6 @@
     align-items: center
     justify-content: space-between
   &__menu
-    width: 468px
     &-list
       display: flex
       align-items: center
@@ -28,15 +27,23 @@
       color: $light
       text-decoration: none
       text-transform: uppercase;
+      font-family: Muller;
+      font-style: normal;
       font-weight: normal;
       font-size: 18px;
       line-height: 22px;
+      cursor: pointer
+      &:hover
+        cursor: pointer
+        border-bottom: 2px solid $light
   &__social
     display: flex
     align-items: center
   &__social-link
     fill: #fff
     margin-right: 30px
+    &:hover
+     fill: $dark
 .logo
   width: 267px
   height: 60px
@@ -46,3 +53,7 @@
 .social-link--vk
   width: 34px
   height: 20px
+.menu-toggle 
+  display: none
+.header--dark
+  background-color: $dark

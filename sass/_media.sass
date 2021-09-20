@@ -1,0 +1,194 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .header
+    &__wrapper
+      max-width: 960px
+      padding-left: 30px
+    &__menu
+      margin-right: 30px
+      &-list
+        padding-left: 30px
+        margin-left: 0
+      &-item:not(:last-child):after
+        margin-left: 10px
+        margin-right: 10px
+    &__social
+       display: none
+  .logo
+    max-width: 222px
+    max-height: 50px
+  .swiper
+    &-button--prev
+      margin-left: 20px
+    &-button--next
+      margin-right: 20px
+    &-pagination
+      bottom: 165px !important
+    &__modal-link
+      bottom: 90px
+  .first-screen
+    padding-top: 100px
+    &__wrapper
+    &::after
+      width: 266px
+      height: 266px
+    &__text
+      font-family: Uni Neue;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 95px;
+    &__description
+      max-width: 530px
+      margin-bottom: 10px
+  .about-us
+    padding-top: 64px
+    &__container
+      display: flex
+      align-items: center
+    &__text
+      margin-right: 45px;
+    &__img
+      max-width: 266px
+      max-height: 376px
+@media (max-width: 767px)
+  .header
+    &__wrapper
+      padding-left: 30px
+      padding-right: 20px
+      padding-bottom: 30px
+      padding-top: 34px
+    &__menu
+       display: none
+    &__social
+       display: none
+  .sidebar 
+    position: fixed
+    top: 102px
+    right: 0
+    height: 35%
+    width: 100%
+    background-color: $dark
+    padding: 30px
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15)
+    transform: translateX(100%)
+    transition: transform 0.2s
+    overflow-y: auto
+    z-index: 101
+  .sidebar.visible 
+    transform: translateX(0)
+  .sidebar
+    visibility: visible
+    &-nav
+      margin-bottom: 20px
+    &-menu
+      margin: 0;
+      border-top: none
+      list-style: none
+      padding: 0
+      &-link
+        text-decoration: none
+        color: $light
+        font-family: Uni Neue;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 22px;
+        padding: 16px 4px
+        display: inline-block
+        width: 100%
+      &:hover 
+        background-color: #fffbe6
+    &__social-link
+      margin-right: 20px
+      fill: #fff
+  .menu-toggle 
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    width: 30px
+    height: 23px
+    margin-right: 20px
+    &.is-open
+      span:nth-child(2)
+       display: none
+    &.is-open
+      span:first-child
+       transform: rotate(45deg)
+    &.is-open
+      span:last-child
+       transform: translate3d(0, 0, 0) rotate(-45deg)
+       display: block;
+       position: absolute;
+       transition: transform 200ms;
+       width: 30px   
+  .menu-toggle span 
+    height: 5px
+    border-radius: 2px;
+    width: 100%
+    background-color: #fff
+  .logo
+    width: 150px
+    height: 34px
+  .first-screen
+    padding-top: 100px
+    max-height: 520px
+    &__text
+      font-family: Uni Neue;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 72px;
+      line-height: 95px;
+      padding-top: 40px
+      margin-bottom: 10px;
+    &__wrapper
+      width: 540px
+      &::after
+        width: 266px
+        height: 266px
+        top: 75%
+    &__description
+      width: 530px
+      font-family: Uni Neue;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: 1px;
+  .swiper
+    &-pagination
+      bottom: 140px !important
+    &__modal-link
+      bottom: 40px
+    &-button
+      display: none
+  .about-us
+    padding-top: 64px
+    margin-right: 0px
+    &__container
+      width: 708px
+    &__content
+    &__title
+      font-size: 30px;
+      line-height: 40px;
+      margin-bottom: 20px
+    &__text
+      font-size: 18px;
+      line-height: 30px;
+      margin-right: 0
+    &__img
+      display: none
+  .social-icon
+    display: flex
+    align-items: center
+    padding-left: 4px
+  .leave-a-request
+   display: none
+  .contacts
+    display: none
+  .price
+    display: none
+  .footer
+    display: none
+  
