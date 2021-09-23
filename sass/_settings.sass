@@ -12,6 +12,8 @@
   position: relative
   padding-right: 10px
   padding-left: 10px
+  text-transform: uppercase
+  transition: .3s
   &::after
     content: ""
     position: absolute
@@ -20,8 +22,12 @@
     left: 0
     right: 0
     transform: translateY(-50%)
-    height: 10px
-    background: rgba(107, 201, 189, 0.5)
+    border: 5px solid  rgba(107, 201, 189, 0.5)
+  &:hover
+    font-size: 28px;
+    line-height: 36px;
+    padding-left: 0
+    padding-right: 0  
 .container
   max-width: 1175px
   width: 100%

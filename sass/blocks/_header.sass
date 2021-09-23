@@ -5,6 +5,7 @@
   top: 0
   right: 0
   z-index: 100
+  transition: .4s
   &__wrapper
     max-width: 1138px
     margin: auto
@@ -13,17 +14,33 @@
     display: flex
     align-items: center
     justify-content: space-between
-  &__menu
-    &-list
-      display: flex
-      align-items: center
-      list-style: none
-    &-item:not(:last-child):after
-      content: "/"
-      color: $light
-      margin-left: 25px
-      margin-right: 25px
-    &-link
+  &__social
+    display: flex
+    align-items: center
+  &__social-link
+    fill: #fff
+    margin-right: 30px
+    &:hover
+     fill: $dark
+  &__social-fb
+    width: 30px
+    height: 31px
+  &__social-vk
+    width: 34px
+    height: 35px
+.navigation
+  &__list
+    display: flex
+    align-items: center
+    list-style: none
+    justify-content: space-between
+    margin-right: 30px;
+  &__item:not(:last-child):after
+    content: "/"
+    color: $light
+    margin-left: 25px
+    margin-right: 25px
+  &__link
       color: $light
       text-decoration: none
       text-transform: uppercase;
@@ -34,26 +51,110 @@
       line-height: 22px;
       cursor: pointer
       &:hover
-        cursor: pointer
         border-bottom: 2px solid $light
-  &__social
-    display: flex
-    align-items: center
-  &__social-link
-    fill: #fff
-    margin-right: 30px
-    &:hover
-     fill: $dark
+.menu-toggle
+    display: none
 .logo
   width: 267px
   height: 60px
-.social-link--fb
-  width: 16px
-  height: 31px
-.social-link--vk
-  width: 34px
-  height: 20px
-.menu-toggle 
-  display: none
-.header--dark
+.js-header--dark
   background-color: $dark
+  .header__social-link:hover
+      fill: $primary
+
+@media (max-width: 767px)
+  .header
+    &__toggle
+        display: block
+    &__social.active
+      display: block !important
+      position: absolute
+      left: 0
+      top: 100%
+      transform: translateY(180%)
+      padding: 20px
+      background-color: $dark
+      width: 100%
+    .navigation
+        display: none
+        &.active
+            display: block
+        &__list
+            display: block
+            background-color: $dark
+            position: absolute
+            left: 0
+            top: 100%
+            width: 100%
+            padding: 20px
+            margin-top: 0
+        &__item
+          margin-bottom: 20px
+          &::after
+            display: none
+  .hamburger 
+    padding: 15px 15px
+    display: inline-block
+    cursor: pointer
+    transition-property: opacity, filter
+    transition-duration: 0.15s
+    transition-timing-function: linear
+    font: inherit
+    color: inherit
+    text-transform: none
+    background-color: transparent
+    border: 0
+    margin: 0
+    overflow: visible
+  .hamburger:hover 
+      opacity: 0.7
+  .hamburger.active:hover 
+      opacity: 0.7
+  .hamburger.active .hamburger-inner,
+  .hamburger.active .hamburger-inner::before,
+  .hamburger.active .hamburger-inner::after 
+      background-color: $light
+  .hamburger-box
+    width: 40px
+    height: 24px
+    display: inline-block
+    position: relative
+  .hamburger-inner
+    display: block
+    top: 50%
+    margin-top: -2px
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+      width: 30px
+      height: 4px
+      background-color: $light
+      border-radius: 4px
+      position: absolute
+      transition-property: transform
+      transition-duration: 0.15s
+      transition-timing-function: ease
+  .hamburger-inner::before, .hamburger-inner::after
+      content: "";
+      display: block
+  .hamburger-inner::before
+      top: -10px
+  .hamburger-inner::after
+      bottom: -10px
+  .hamburger--squeeze .hamburger-inner
+    transition-duration: 0.075s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  .hamburger--squeeze .hamburger-inner::before
+      transition: top 0.075s 0.12s ease, opacity 0.075s ease
+  .hamburger--squeeze .hamburger-inner::after
+      transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  .hamburger--squeeze.active .hamburger-inner
+    transform: rotate(45deg)
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+  .hamburger--squeeze.active .hamburger-inner::before 
+      top: 0
+      opacity: 0
+      transition: top 0.075s ease, opacity 0.075s 0.12s ease
+  .hamburger--squeeze.active .hamburger-inner::after 
+      bottom: 0
+      transform: rotate(-90deg)
+      transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)   
