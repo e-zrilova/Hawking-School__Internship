@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,QAAQ,CAAC;EACP,QAAQ,EAAE,KAAK;CAAG",
-    "sources": [
-        "../sass/blocks/menu-toggle.sass"
-    ],
-    "names": [],
-    "file": "menu-toggle.css"
-}

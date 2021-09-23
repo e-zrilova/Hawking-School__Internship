@@ -14,34 +14,33 @@
   <header class="header">
     <div class="header__wrapper">
       <a href="#" class="header__logo-link"><img src="img/logo.png" alt="icon: logo" class="header__logo logo"></a>
-      <nav class="header__menu">
-        <ul class="header__menu-list">
-          <li class="header__menu-item"><a href="" class="header__menu-link">О НАС</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">ПРЕДЛОЖЕНИЯ</a></li>
-          <li class="header__menu-item"><a href="" class="header__menu-link">КОНТАКТЫ</a></li>
+      <nav class="header__navigation navigation js-menu-content">
+        <ul class="navigation__list">
+          <li class="navigation__item js-menu-item"><a href="#about-us" class="navigation__link">О НАС</a></li>
+          <li class="navigation__item js-menu-item"><a href="#price" class="navigation__link">ПРЕДЛОЖЕНИЯ</a></li>
+          <li class="navigation__item js-menu-item"><a href="#contacts" class="navigation__link">КОНТАКТЫ</a></li>
         </ul>
       </nav>
-      <div class="header__social">
+      <nav class="header__social js-header__social">
         <a href="https://www.facebook.com/" class="header__social-link">
-          <svg class="social-link--fb" id="Bold" enable-background="new 0 0 24 24" height="0" viewBox="0 0 24 24"
-            width="0" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
-          </svg></a>
-        <a href="https://vk.com/" class="header__social-link">
-          <svg class="social-link--vk" id="Bold" enable-background="new 0 0 24 24" height="0" viewBox="0 0 24 24"
-            width="0" xmlns="http://www.w3.org/2000/svg">
-            <path
-              d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z" />
+          <svg class="header__social-fb">
+            <use href="img/sprite.svg#facebook"></use>
           </svg>
         </a>
+        <a href="https://vk.com/" class="header__social-link">
+          <svg class="header__social-vk">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </nav>
+      <div class="hamburger hamburger--squeeze js-menu-toggle">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
       </div>
-      <a href="#" class="menu-toggle" id="menu-toggle">
-        <span></span><span></span><span></span>
-      </a>
     </div>
   </header>
-  <div class="first-screen">
+  <div class="first-screen js-first-screen">
     <!-- Slider main container -->
     <div class="swiper first-screen__slider">
       <!-- Additional required wrapper -->
@@ -50,83 +49,61 @@
         <div class="swiper-slide first-screen__slide">
           <div class="first-screen__wrapper">
             <h2 class="first-screen__text">CONCERT HOME</h2>
-            <span class="first-screen__description">
+            <p class="first-screen__description">
               ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
               ВЫРАВНИВАНИЕ
               ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
-            </span>
+            </p>
           </div>
-          <img src="img/slide1.jpg" alt="" class="first-screen__img">
+          <img src="img/slide1.jpg" alt="photo: slide1" class="first-screen__img">
         </div>
          <div class="swiper-slide first-screen__slide">
            <div class="first-screen__wrapper">
              <h2 class="first-screen__text">CONCERT HOME</h2>
-             <span class="first-screen__description">
+             <p class="first-screen__description">
                ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
                ВЫРАВНИВАНИЕ
                ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
-             </span>
+             </p>
            </div>
-           <img src="img/slide1.jpg" alt="" class="first-screen__img">
+           <img src="img/slide1.jpg" alt="photo: slide2" class="first-screen__img">
          </div>
           <div class="swiper-slide first-screen__slide">
             <div class="first-screen__wrapper">
               <h2 class="first-screen__text">CONCERT HOME</h2>
-              <span class="first-screen__description">
+              <p class="first-screen__description">
                 ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
                 ВЫРАВНИВАНИЕ
                 ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
-              </span>
+              </p>
             </div>
-            <img src="img/slide1.jpg" alt="" class="first-screen__img">
+            <img src="img/slide1.jpg" alt="photo: slide3" class="first-screen__img">
           </div>
       </div>
     </div>
     <!-- If we need pagination -->
     <div class="swiper-pagination"></div>
-    <a class="swiper__modal-link link">ОСТАВИТЬ ЗАЯВКУ</a>
+    <div class="test">
+      <a class="swiper-modal-link link">ОСТАВИТЬ ЗАЯВКУ</a>
+    </div>
     <!-- If we need navigation buttons -->
     <button class="swiper-button swiper-button--prev"></button>
     <button class="swiper-button swiper-button--next"></button>
   </div>
-  <aside class="sidebar">
-    <nav class="sidebar-nav">
-      <ul class="sidebar-menu">
-        <li class="sidebar-menu-item"><a href="#" class="sidebar-menu-link">О НАС</a></li>
-        <li class="sidebar-menu-item"><a href="#" class="sidebar-menu-link">ПРЕДЛОЖЕНИЯ</a></li>
-        <li class="sidebar-menu-item "><a href="#" class="sidebar-menu-link">КОНТАКТЫ</a></li>
-      </ul>
-    </nav>
-     <div class="social-icon">
-       <a href="https://www.facebook.com/" class="sidebar__social-link">
-         <svg class="social-link--fb" id="Bold" enable-background="new 0 0 24 24" height="0" viewBox="0 0 24 24"
-           width="0" xmlns="http://www.w3.org/2000/svg">
-           <path
-             d="m15.997 3.985h2.191v-3.816c-.378-.052-1.678-.169-3.192-.169-3.159 0-5.323 1.987-5.323 5.639v3.361h-3.486v4.266h3.486v10.734h4.274v-10.733h3.345l.531-4.266h-3.877v-2.939c.001-1.233.333-2.077 2.051-2.077z" />
-         </svg></a>
-       <a href="https://vk.com/" class="sidebar__social-link">
-         <svg class="social-link--vk" id="Bold" enable-background="new 0 0 24 24" height="0" viewBox="0 0 24 24"
-           width="0" xmlns="http://www.w3.org/2000/svg">
-           <path
-             d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z" />
-         </svg>
-       </a>
-     </div>
-  </aside>
-  <section class="about-us">
+  <section class="about-us" id="about-us">
     <div class="about-us__container container">
 <div class="about-us__content">
 <h2 class="about-us__title">ЗАГОЛОВОК</h2>
-<span class="about-us__text">Таким образом дальнейшее развитие различных форм деятельности в&nbsp;значительной
+<p class="about-us__text">Таким образом дальнейшее развитие различных форм деятельности в&nbsp;значительной
   степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Задача организации,
   в&nbsp;особенности&nbsp;же рамки и&nbsp;место обучения кадров в&nbsp;значительной степени обуславливает создание
-  системы обучения кадров, соответствует.</span>
+  системы обучения кадров, соответствует.</p>
 </div>
-        <img src="img/h@3x.png" alt="" class="about-us__img">
+        <img src="img/h@3x.png" alt="photo: about-us" class="about-us__img">
     </div>
     
   </section>
-  <section class="price">
+  <section class="price" id="price">
     <div class="price__wrapper">
       <h2 class="price__title">Наши предложения</h2>
       <div class="acor-container">
@@ -135,29 +112,34 @@
           <label for="acor1">Площадка 3.500 мест</label>
           <div class="acor-body">
             <p>
-              <ul>
-                <li><strong>ГОРОД:</strong>Город</li>
-                <li><strong>ЦЕНА:</strong>250 000 </li>
-                <li><strong>ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-                <li><strong>НАЗВАНИЕ:</strong>Название</li>
+              <ul class="acor-body__list">
+                <li class="acor-body__item">
+                  <strong class="acor-body__item--b">ГОРОД:</strong>Город
+                </li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">ЦЕНА:</strong>250 000 </li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">НАЗВАНИЕ:</strong>Название</li>
               </ul>
             </p>
+            <a href="#" class="acor-body__link link">ЗАБРОНИРОВАТЬ</a>
           </div>
         </div>
-
 
         <input type="radio" name="acor" id="acor2" />
         <div class="accordion__item">
           <label for="acor2">Площадка 3.500 мест</label>
           <div class="acor-body">
-            <p>
-              <ul>
-                <li><strong>ГОРОД:</strong>Город</li>
-                <li><strong>ЦЕНА:</strong>250 000 </li>
-                <li><strong>ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-                <li><strong>НАЗВАНИЕ:</strong>Название</li>
-              </ul>
-            </p>
+           <p>
+             <ul class="acor-body__list">
+               <li class="acor-body__item">
+                 <strong class="acor-body__item--b">ГОРОД:</strong>Город
+               </li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">ЦЕНА:</strong>250 000 </li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">НАЗВАНИЕ:</strong>Название</li>
+             </ul>
+           </p>
+           <a href="#" class="acor-body__link link">ЗАБРОНИРОВАТЬ</a>
           </div>
         </div>
 
@@ -165,18 +147,39 @@
         <div class="accordion__item">
           <label for="acor3">Площадка 3.500 мест</label>
           <div class="acor-body">
-            <p>
-              <ul>
-                <li><strong>ГОРОД:</strong>Город</li>
-                <li><strong>ЦЕНА:</strong>250 000 </li>
-                <li><strong>ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-                <li><strong>НАЗВАНИЕ:</strong>Название</li>
-              </ul>
-            </p>
+           <p>
+             <ul class="acor-body__list">
+               <li class="acor-body__item">
+                 <strong class="acor-body__item--b">ГОРОД:</strong>Город
+               </li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">ЦЕНА:</strong>250 000 </li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+               <li class="acor-body__item"><strong class="acor-body__item--b">НАЗВАНИЕ:</strong>Название</li>
+             </ul>
+           </p>
+           <a href="#" class="acor-body__link link">ЗАБРОНИРОВАТЬ</a>
           </div>
         </div>
 
+        <input type="radio" name="acor" id="acor4" />
+        <div class="accordion__item">
+          <label for="acor4">Площадка 3.500 мест</label>
+          <div class="acor-body">
+            <p>
+              <ul class="acor-body__list">
+                <li class="acor-body__item">
+                  <strong class="acor-body__item--b">ГОРОД:</strong>Город
+                </li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">ЦЕНА:</strong>250 000 </li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+                <li class="acor-body__item"><strong class="acor-body__item--b">НАЗВАНИЕ:</strong>Название</li>
+              </ul>
+            </p>
+            <a href="#" class="acor-body__link link">ЗАБРОНИРОВАТЬ</a>
+          </div>
+        </div>
       </div>
+      
     </div>
 
   </section>
@@ -185,46 +188,55 @@
     <form action="" class="leave-a-request__form">
       <div class="leave-a-request__wrapper">
         <div class="input__wrapper">
-          <label for="request__name">Имя:</label>
-          <input type="text" name="" id="request__name" placeholder="Введите имя" class="request__name">
-          <label for="request__name">Телефон:</label>
-          <input type="tel" name="" id="request__tel" placeholder="+7 (___) ___-__-__" class="request__tel">
-          <label for="request__name">Email:</label>
-          <input type="email" name="" id="requst__email" placeholder="example@mail.com" class="requst__email">
-          <label for="request__offer">Выберите предложение:</label>
-          <input name="offer" id="request__offer" />
-          <select id="cities">
-            <option value="Naples">Предложение 1</option>
-            <option value="London">Предложение 2</option>
-            <option value="Berlin">Предложение 3</option>
-            <option value="New York">Предложение 4</option>
-          </select>
+         <div class="name-wrapper">
+            <label for="request__name" class="label-form">Имя:</label>
+            <input type="text" name="" id="request__name" placeholder="Введите имя" class="request__name input-form">
+         </div>
+          <div class="phone-wrapper">
+            <label for="request__name">Телефон:</label>
+            <input type="tel" name="" id="request__tel" placeholder="+7 (___) ___-__-__"
+              class="request__tel input-form">
+          </div>
+        <div class="wrapper-email">
+            <label for="request__name">Email:</label>
+            <input type="email" name="" id="requst__email" placeholder="example@mail.com"
+              class="requst__email input-form">
         </div>
-        <div class="request__offer">
-          <p class="offer__title">Пол:</p>
-          <input id="radio-1" type="radio" name="radio" value="1" checked>
+         <div class="wrapper-offer">
+            <label for="request__offer">Выберите предложение:</label>
+            <select id="request__offer" class="select-form">
+              <option value="Naples">Предложение 1</option>
+              <option value="London">Предложение 2</option>
+              <option value="Berlin">Предложение 3</option>
+              <option value="New York">Предложение 4</option>
+            </select>
+         </div>
+        </div>
+        <div class="wrapper__gender">
+          <p class="gender__title">Пол:</p>
+          <input id="radio-1" type="radio" name="gender" value="1" checked class="real-radio-btn">
+          <p class="custom-radio-btn"></p>
           <label for="radio-1">Мужской</label>
-          <input id="radio-2" type="radio" name="radio" value="2">
+          <input id="radio-2" type="radio" name="gender" value="2" class="real-radio-btn">
           <label for="radio-2">Женский</label>
         </div>
         <p>Комментарий:</p>
-        <p><textarea name="text" placeholder="Введите комментарий..."></textarea></p>
+        <p><textarea name="text" placeholder="Введите комментарий..." class="textarea-form"></textarea></p>
         <div class="check__wrapper">
           <input type="checkbox" class="custom-checkbox" id="chk1" name="chk1" value="yes">
           <label for="chk1">Даю согласие на обработку персональных данных</label>
         </div>
-
       </div>
       <a href="#" class="leave-a-request__link link">Оставить заявку</a>
     </form>
   </section>
-  <section class="contacts">
+  <section class="contacts" id="contacts">
     <div class="contacts__wrapper">
       <div class="contacts__column">
         <h2 class="contacts__title">КОНТАКТЫ</h2>
-        <div class="info__wrapper">
-          <span class=" contacts__info contacts__adress">ул. Арбат, 1а, Москва 119019, Россия</span>
-          <span class=" contacts__info contacts__phone">+7(495) 000-00-00</span>
+        <div class="contacts__info">
+          <p class=" contacts__info contacts__adress">ул. Арбат, 1а, Москва 119019, Россия</p>
+          <p class=" contacts__info contacts__phone">+7(495) 000-00-00</p>
           <a href="mailto:info@mysite.ru" class=" contacts__email">info@mysite.ru</a>
         </div>
       </div>
@@ -238,7 +250,9 @@
   <footer class="footer">
     <div class="footer__wrapper">
       <a href="#" class="footer__logo-link"><img src="img/logo.png" alt="icon: logo" class="footer__logo logo"></a>
-      <span class="footer__copyright">© 2019 Concert Home. Сайт создан в Hawking Bros.</span>
+      <p class="footer__copyright">© 2019 Concert Home. Сайт создан в <a href="https://hawkingbros.com/"
+          class="footer__company-link">Hawking
+          Bros.</a> </p>
     </div>
   </footer>
   <script src="js/swiper-bundle.min.js"></script>

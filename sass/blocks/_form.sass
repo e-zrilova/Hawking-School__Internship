@@ -16,11 +16,90 @@
     color: $light
     margin-top: 0
     margin-bottom: 48px
+    text-transform: uppercase
   &__form
     width: 550px
     padding: 45px 60px
     border: 2px solid #6BC9BD
     background-color: $dark
     color: $light
-    
-    
+  &__link
+    display: inline-block
+    margin-bottom: 30px
+    margin-top: 30px
+    position: relative
+    z-index: 96
+    left: 50%
+    transform: translateX(-50%)
+  .label-form
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05px;
+  .input-form
+    border: 1px solid #FFFFFF
+    background: none
+    width: 100%
+    padding: 9px 0
+    padding-left: 22px
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05px;
+    margin-top: 16px
+    margin-bottom: 16px
+  .select-form
+    width: 100%
+    padding: 9px 0
+    border: 1px solid #FFFFFF
+    background: none  
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05px;
+    margin-top: 16px
+    margin-bottom: 16px
+    color: $light
+    padding-left: 22px
+  .textarea-form
+    width: 100%
+    padding: 9px 0
+    border: 1px solid #FFFFFF
+    background: none  
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.05px;
+    margin-top: 16px
+    margin-bottom: 16px
+    color: $light
+    padding-left: 22px
+  input[type="checkbox"] + label::before
+    content: '\a0'; /* неразрывный пробел */
+    display: inline-block
+    vertical-align: .2em
+    width: 25px
+    height: 25px
+    margin-right: .2em
+    border: 2px solid $primary
+    text-indent: .15em
+    line-height: .65
+  input[type="checkbox"]:checked + label::before 
+    content: url(../../img/check.svg)
+  input[type="checkbox"] 
+    position: absolute
+    clip: rect(0,0,0,0)
+  input[type="checkbox"]:focus + label::before 
+    box-shadow: 0 0 .1em .1em #58a
+  input[type="checkbox"]:disabled + label::before 
+    background: gray
+    box-shadow: none
+    color: #555
