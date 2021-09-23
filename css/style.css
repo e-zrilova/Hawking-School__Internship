@@ -638,17 +638,16 @@ template {
 .first-screen {
   position: relative;
   padding-top: 131px;
-  height: 100vh;
-  max-height: 990px;
 }
 
 .first-screen__slider {
   width: 100%;
-  height: 100%;
 }
 
 .first-screen__slide {
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 285px;
 }
 
 .first-screen__slide::after {
@@ -692,9 +691,10 @@ template {
   font-size: 20px;
   line-height: 48px;
   letter-spacing: 1px;
-  max-width: 829px;
   z-index: 6;
   text-transform: uppercase;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .first-screen__wrapper {
@@ -720,7 +720,7 @@ template {
 }
 
 .swiper-pagination {
-  bottom: 170px !important;
+  bottom: 130px !important;
 }
 
 .swiper-pagination-bullet {
@@ -731,7 +731,7 @@ template {
 }
 
 .swiper-button {
-  top: 60%;
+  top: 63%;
   width: 36px;
   height: 60px;
   border: none;
@@ -762,7 +762,7 @@ template {
 .swiper-modal-link {
   left: 50%;
   transform: translateX(-50%);
-  bottom: 90px;
+  bottom: 60px;
   position: absolute;
   z-index: 96;
   cursor: pointer;
@@ -1222,7 +1222,7 @@ template {
     margin-right: 20px;
   }
   .swiper-pagination {
-    bottom: 165px !important;
+    bottom: 130px !important;
   }
   .swiper__modal-link {
     bottom: 90px;
@@ -1381,10 +1381,10 @@ template {
     letter-spacing: 1px;
   }
   .swiper-pagination {
-    bottom: 140px !important;
+    bottom: 70px !important;
   }
-  .swiper__modal-link {
-    bottom: 40px;
+  .swiper-modal-link {
+    bottom: 1px;
   }
   .swiper-button {
     display: none;
