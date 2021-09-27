@@ -13,17 +13,29 @@
     line-height: 64px;
     color: $light
     margin-top: 62px
-    margin-bottom: 64px
+    margin-bottom: 31px
     text-transform: uppercase
   &__info
     margin-bottom: 45px
     display: flex
-    align-items: center
+    align-items: flex-start
     max-width: 274px
+    flex-direction: column
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: $light
   &__email
     display: flex
     align-items: center
     color: $light
+  &__phone
+    margin-bottom: 39px
+  &__adress, &__phone 
+    display: flex
+    align-items: center  
   &__adress::before
     content: url("../../img/map.svg")
     margin-right: 28px
@@ -32,16 +44,7 @@
     margin-right: 28px
   &__email::before
     content: url("../../img/mail.svg")
-    margin-right: 28px
-  &__info
-    display: flex
-    flex-direction: column
-    font-family: Muller;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 22px;
-    color: $light
+    margin-right: 28px 
 .map
   width: 749px
   height: 463px

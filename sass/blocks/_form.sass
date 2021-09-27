@@ -1,12 +1,14 @@
-.leave-a-request
+.form
   display: flex
   flex-direction: column
   align-items: center
-  padding-top: 60px
+  padding-top: 42px
   padding-bottom: 60px
   background-image: url(../../img/form-img.jpg)
   background-repeat: no-repeat
   background-size: cover
+  &__wrapper
+    padding-left: 10px
   &__title
     font-family: Uni Neue;
     font-style: normal;
@@ -15,30 +17,33 @@
     line-height: 79px;
     color: $light
     margin-top: 0
-    margin-bottom: 48px
+    margin-bottom: 30px
     text-transform: uppercase
   &__form
     width: 550px
-    padding: 45px 60px
     border: 2px solid #6BC9BD
     background-color: $dark
     color: $light
+    padding-left: 62px
+    padding-right: 56px
+    padding-top: 45px
+    padding-bottom: 11px
   &__link
     display: inline-block
     margin-bottom: 30px
-    margin-top: 30px
+    margin-top: 40px
     position: relative
     z-index: 96
     left: 50%
     transform: translateX(-50%)
-  .label-form
+  &__label
     font-family: Uni Neue;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05px;
-  .input-form
+  &__input-name, &__input-tel, &__input-email
     border: 1px solid #FFFFFF
     background: none
     width: 100%
@@ -50,12 +55,12 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05px;
-    margin-top: 16px
+    margin-top: 18px
     margin-bottom: 16px
-  .select-form
+    color: $light
+  &__wrapper-select
     width: 100%
     padding: 9px 0
-    border: 1px solid #FFFFFF
     background: none  
     font-family: Uni Neue;
     font-style: normal;
@@ -63,43 +68,126 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05px;
-    margin-top: 16px
     margin-bottom: 16px
     color: $light
-    padding-left: 22px
-  .textarea-form
+  &__textarea
     width: 100%
     padding: 9px 0
     border: 1px solid #FFFFFF
-    background: none  
-    font-family: Uni Neue;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 22px;
-    letter-spacing: 0.05px;
-    margin-top: 16px
-    margin-bottom: 16px
-    color: $light
+    background: none
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.05px
+    margin-bottom: 4px
+    color: #fff
     padding-left: 22px
-  input[type="checkbox"] + label::before
-    content: '\a0'; /* неразрывный пробел */
-    display: inline-block
-    vertical-align: .2em
-    width: 25px
-    height: 25px
-    margin-right: .2em
-    border: 2px solid $primary
-    text-indent: .15em
-    line-height: .65
-  input[type="checkbox"]:checked + label::before 
-    content: url(../../img/check.svg)
-  input[type="checkbox"] 
+    resize: none
+    height: 98px
+  &__wrapper-radiobutton
+    margin-bottom: 20px
+.visually-hidden
+      position: absolute
+      clip: rect(0 0 0 0)
+      width: 1px
+      height: 1px
+      margin: -1px
+.form-span
+  position: relative
+  padding-left: 45px
+  font-family: Uni Neue
+  font-style: normal
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  letter-spacing: 0.05px
+  &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      width: 25px
+      height: 25px
+      border: 2px solid $primary
+  &:after
+      content: ''
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 8px
+      margin: auto
+      width: 23px
+      background: url(../../img/check.svg) center center no-repeat
+      display: none
+.visually-hidden:checked+.form-span:after
+  display: block
+.form-radiobutton
+  position: relative
+  padding-left: 45px
+  font-family: Uni Neue
+  font-style: normal
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  letter-spacing: 0.05px
+  &:before
+      content: ""
+      position: absolute
+      top: 0
+      bottom: 0
+      left: 0
+      margin: auto
+      width: 25px
+      height: 25px
+      border: 2px solid $primary
+      border-radius: 85px
+  &:after
+    content: ''
     position: absolute
-    clip: rect(0,0,0,0)
-  input[type="checkbox"]:focus + label::before 
-    box-shadow: 0 0 .1em .1em #58a
-  input[type="checkbox"]:disabled + label::before 
-    background: gray
-    box-shadow: none
-    color: #555
+    top: 0
+    bottom: 0
+    left: 11px
+    margin: auto
+    width: 7px
+    height: 7px
+    background-color: #fff
+    display: none
+    border-radius: 50%
+      
+.visually-hidden:checked+.form-radiobutton:after
+  display: block
+.custom-label
+  margin-right: 38px
+
+.form__wrapper-textarea
+  margin: 20px 0
+.choices
+  margin-top: 10px
+.choices__inner
+  background-color: transparent
+  border: 1px solid #FFFFFF
+  padding: 6.5px 17.5px 3.75px;
+.choices__list
+  background-color: $dark
+.choices[data-type*=select-one]:after
+  background: url(../img/arrow-next.svg) center center/cover no-repeat
+  content: ''
+  height: 23px
+  width: 12px
+  border-style: none
+  border-color: transparent transparent
+  border-width: 0
+  position: absolute
+  right: 25.5px
+  top: 10px
+  margin-top: 0
+  pointer-events: none
+  transform: rotate(90deg)
+.choices__list--dropdown .choices__item--selectable.is-highlighted
+  background-color: $dark
+.choices.is-focused.is-open:after
+  top: 17px
