@@ -7,16 +7,20 @@
   z-index: 100
   transition: .4s
   &__wrapper
-    max-width: 1138px
+    max-width: 1140px
     margin: auto
     padding-top: 35px
     padding-bottom: 36px
     display: flex
     align-items: center
     justify-content: space-between
+    &-navigation
+      display: flex
+      margin-left: auto
   &__social
     display: flex
     align-items: center
+    margin-left: 30px
   &__social-link
     fill: #fff
     margin-right: 30px
@@ -34,12 +38,20 @@
     align-items: center
     list-style: none
     justify-content: space-between
-    margin-right: 30px;
+    padding-left: 0
+    padding-right: 4px
+  &__item 
+    display: flex
+    align-items: center
   &__item:not(:last-child):after
-    content: "/"
-    color: $light
-    margin-left: 25px
+    content: ""
+    margin-left: 28px
     margin-right: 25px
+    height: 15px
+    border: 1px solid $light
+    display: inline-block
+    transform: skew(330deg, 0)
+    border-radius: 2px
   &__link
       color: $light
       text-decoration: none
@@ -55,10 +67,11 @@
 .menu-toggle
     display: none
 .logo
-  width: 267px
-  height: 60px
+  width: 100%
 .js-header--dark
   background-color: $dark
+  .navigation__item:after
+    border: 1px solid $primary
   .header__social-link:hover
       fill: $primary
 
@@ -66,32 +79,39 @@
   .header
     &__toggle
         display: block
-    &__social.active
+    &__social
       display: block !important
-      position: absolute
-      left: 0
-      top: 100%
-      transform: translateY(180%)
-      padding: 20px
-      background-color: $dark
       width: 100%
+      padding-top: 20px
+      margin-left: 0
+      &-link:hover
+        fill: $primary
+    &__wrapper-navigation
+      display: none
+    &__wrapper-navigation.active
+      display: block
+      background: $dark
+      width: 100%
+      position: absolute
+      top: 100%
+      left: 0
+      padding-left: 30px
+      padding-bottom: 30px
+      padding-top: 10px 
     .navigation
-        display: none
-        &.active
-            display: block
-        &__list
-            display: block
-            background-color: $dark
-            position: absolute
-            left: 0
-            top: 100%
-            width: 100%
-            padding: 20px
-            margin-top: 0
-        &__item
-          margin-bottom: 20px
-          &::after
-            display: none
+      &.active
+        display: block
+      &__list
+        display: block
+        left: 0
+        top: 100%
+        width: 100%
+        padding-left: 0
+        margin-top: 0
+      &__item
+        margin-top: 20px
+        &::after
+          display: none
   .hamburger 
     padding: 15px 15px
     display: inline-block
@@ -158,3 +178,11 @@
       bottom: 0
       transform: rotate(-90deg)
       transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)   
+@media( min-width: 375px) and (max-width:380px)
+  .logo
+    max-width: 222px
+    max-height: 50px
+@media( max-width: 374px)
+  .logo
+    max-width: 150px
+    max-height: 34px
