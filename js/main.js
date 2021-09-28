@@ -19,50 +19,6 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-
-
-// (function () {
-//   const menuToggle = document.querySelector('.js-menu-toggle')
-//   const menuItems = document.querySelectorAll('.js-menu-item')
-//   const menuContent = document.querySelector('.js-menu-content')
-//   const Social = document.querySelector('.js-header__social')
-//   // const hamburgers = document.querySelector('.hamburger')
-
-//   if (menuToggle && Social && menuContent && hamburgers && menuItems.length) {
-//     function openMenu() {
-//       menuToggle.classList.add('active')
-//       menuContent.classList.add('active')
-//       Social.classList.add('active')
-//       // hamburgers.classList.add('active')
-//     }
-
-//     function closeMenu() {
-//       menuToggle.classList.remove('active')
-//       menuContent.classList.remove('active')
-//       Social.classList.remove('active')
-//       // hamburgers.classList.remove('active')
-//     }
-
-//     function toggleMenu() {
-//       if (menuToggle.classList.contains('active')) {
-//         closeMenu()
-//       } else {
-//         openMenu()
-//       }
-//     }
-
-//     function resizeHandler() {
-//       if (window.innerWidth >= 768) {
-//         closeMenu()
-//       }
-//     }
-//     menuToggle.addEventListener('click', toggleMenu)
-//     // menuItems.forEach(item => {
-//     //   item.addEventListener('click', closeMenu)
-//     // })
-//     window.addEventListener('resize', resizeHandler)
-//   }
-// }());
 (function () {
   const menuToggle = document.querySelector('.js-menu-toggle')
   const menuContent = document.querySelector('.js-header__wrapper-navigation')
@@ -151,50 +107,45 @@ if (titles.length && contents.length && (titles.length === contents.length)) {
   })
 }
 }());
-(function () {
-  // inputMask
-  let inputs = document.querySelectorAll('input[type="tel"]')
-  let im = new Inputmask('+7 (999) 999-99-99')
-  im.mask(inputs)
+// (function () {
+//   // inputMask
+//   let inputs = document.querySelectorAll('input[type="tel"]')
+//   let im = new Inputmask('+7 (999) 999-99-99')
+//   im.mask(inputs)
 
-  let inputsEmail = document.querySelectorAll('input[type="email"]')
-  let imE = new Inputmask('{1,20}[.*{1,20}]@*{1,20}.*{2,4}')
-  imE.mask(inputsEmail)
+//   let inputsEmail = document.querySelectorAll('input[type="email"]')
+//   let imE = new Inputmask('{1,20}[.*{1,20}]@*{1,20}.*{2,4}')
+//   imE.mask(inputsEmail)
 
-  // validate
-
-  function validateForms(selector, rules) {
-    new window.JustValidate(selector, {
-      rules: rules,
-      submitHandler: function (form, values, ajax) {
-        console.log(form);
-
-        let formData = new FormData(form);
-
-        fetch("mail.php", {
-            method: "POST",
-            body: formData
-          })
-          .then(function (data) {
-            console.log(data);
-            console.log('Отправлено');
-            form.reset();
-          });
-      }
-    });
+// }());
+//validators
+(function() {
+  function checkFilled(value) {
+    return !!value;
   }
 
-  validateForms('.leave-a-request__form', {
-    email: {
-      required: true,
-      email: true
-    },
-    fio: {
-      required: true
-    },
-    tel: {
-      required: true
-    }
-  });
+  function emailValidator(email) {
+    return email.includes('@');
+  }
 
-}());
+  window.validators = {
+    checkFilled, 
+    emailValidator
+  };
+})()
+
+//form 
+  const emailField = document.querySelector('.js-input-email');
+
+  if (emailField) {
+    emailField.addEventListener('input', (event) => {
+      const value = event.target.value;
+      
+      if (window.validators.emailValidator(value)) {
+        event.target.classList.remove('js-invalid');
+      } else {
+        event.target.classList.add('js-invalid');    
+      }
+
+    })
+  }
