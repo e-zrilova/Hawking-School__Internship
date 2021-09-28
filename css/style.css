@@ -1342,46 +1342,85 @@ template {
   transition: 0.4ms;
 }
 
+.footer__social {
+  display: none;
+}
+
 @media (max-width: 1200px) {
   .container {
     max-width: 960px;
   }
+  .header {
+    min-width: 768px;
+  }
   .header__wrapper {
-    max-width: 960px;
-    padding-left: 30px;
-  }
-  .header__menu {
-    margin-right: 30px;
-  }
-  .header__menu-list {
-    padding-left: 30px;
-    margin-left: 0;
-  }
-  .header__menu-item:not(:last-child):after {
-    margin-left: 10px;
-    margin-right: 10px;
+    max-width: 700px;
+    margin: 0;
+    padding-bottom: 24px;
+    padding-left: 31px;
   }
   .header__social {
     display: none;
   }
+  .header__logo {
+    width: 222px;
+    height: 50px;
+  }
+  .header__logo-link {
+    display: block;
+    margin-right: 94px;
+  }
+  .navigation {
+    margin-left: 0;
+  }
+  .navigation__list {
+    margin-left: 0;
+  }
+  .navigation__item:not(:last-child):after {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .swiper-button {
+    top: 58%;
+  }
   .swiper-button--prev {
-    margin-left: 20px;
+    margin-left: 13px;
+    width: 14px;
+    height: 23px;
   }
   .swiper-button--next {
-    margin-right: 20px;
+    margin-right: 13px;
+    width: 14px;
+    height: 23px;
   }
   .swiper-pagination {
-    bottom: 130px !important;
+    bottom: 112px !important;
   }
-  .swiper__modal-link {
-    bottom: 90px;
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+  .swiper-modal-link {
+    bottom: 42px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
   }
   .first-screen {
     padding-top: 100px;
   }
-  .first-screen::after {
+  .first-screen__slide {
+    padding-top: 37px;
+    padding-bottom: 154px;
+  }
+  .first-screen__wrapper::after {
     width: 266px;
     height: 266px;
+    top: 67%;
+    left: 50%;
   }
   .first-screen__text {
     font-family: Uni Neue;
@@ -1389,23 +1428,217 @@ template {
     font-weight: 800;
     font-size: 72px;
     line-height: 95px;
+    padding-top: 0;
+    margin-bottom: 32px;
   }
   .first-screen__description {
-    margin-bottom: 10px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 0;
+    width: 612px;
   }
   .about-us {
-    padding-top: 64px;
+    padding-top: 44px;
+    padding-bottom: 40px;
+  }
+  .about-us__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
   }
   .about-us__container {
     display: flex;
-    align-items: center;
   }
   .about-us__text {
-    margin-right: 45px;
+    margin-right: 13px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 30px;
+    margin-top: 0;
   }
   .about-us__img {
     max-width: 266px;
     max-height: 376px;
+  }
+  .about-us__content {
+    padding-top: 17px;
+  }
+  .main-title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 0;
+  }
+  .accordion__wrapper {
+    margin-top: 0;
+    margin-bottom: 7px;
+  }
+  .accordion__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    padding-left: 22px;
+  }
+  .accordion__title::before {
+    padding-right: 30px;
+  }
+  .accordion__title.active::before {
+    padding-right: 39px;
+  }
+  .accordion__body-list {
+    column-gap: 37px;
+  }
+  .accordion__body-item {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 1.2px;
+    margin-bottom: 14px;
+  }
+  .accordion__body-strong {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    margin-right: 33px;
+  }
+  .accordion__content.active {
+    margin: 0;
+    padding-left: 88px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+  }
+  .accordion__body-link {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    margin-left: 4%;
+    margin-bottom: 3%;
+    transform: translateY(-25%);
+  }
+  .form {
+    padding-top: 16px;
+    padding-bottom: 74px;
+    border-bottom: 5px solid #6BC9BD;
+  }
+  .form__form {
+    width: 514px;
+    padding-left: 37px;
+    padding-right: 47px;
+    padding-top: 16px;
+    padding-bottom: 0;
+  }
+  .form__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 18px;
+  }
+  .form__input-name, .form__input-tel, .form__input-email {
+    margin-top: 15px;
+  }
+  .form__wrapper-select {
+    padding: 0;
+  }
+  .choices__inner {
+    padding-left: 9px;
+  }
+  .choices__list--single .choices__item {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.05px;
+  }
+  .choices__list--single {
+    padding-left: 0;
+  }
+  .form__radiobutton-title {
+    margin-bottom: 22px;
+  }
+  .contacts__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 23px;
+  }
+  .contacts__adress, .contacts__phone {
+    margin-top: 0;
+  }
+  .contacts__phone {
+    margin-bottom: 0;
+  }
+  .contacts__email {
+    margin-top: 20px;
+  }
+  .contacts__column {
+    padding-left: 27px;
+  }
+  .contacts__info {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    margin-left: 6px;
+  }
+  .map {
+    width: 383px;
+    height: 368px;
+  }
+  .footer {
+    padding-top: 14px;
+  }
+  .footer__wrapper {
+    padding-left: 32px;
+    padding-right: 30px;
+  }
+  .footer__logo {
+    width: 222px;
+    height: 50px;
+  }
+  .footer__copyright {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: right;
+    width: 220px;
+  }
+  .footer__social {
+    display: block;
+    margin-left: 9px;
+  }
+  .header__social-link {
+    margin-right: 18px;
   }
 }
 
@@ -1558,18 +1791,6 @@ template {
     display: flex;
     align-items: center;
     padding-left: 4px;
-  }
-  .leave-a-request {
-    display: none;
-  }
-  .contacts {
-    display: none;
-  }
-  .price {
-    display: none;
-  }
-  .footer {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
