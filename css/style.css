@@ -1254,6 +1254,16 @@ template {
   top: 17px;
 }
 
+.choices__list--single .choices__item {
+  width: 100%;
+  font-family: Uni Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05px;
+}
+
 .contacts {
   background-color: #2C2C2C;
 }
