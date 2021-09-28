@@ -1010,6 +1010,7 @@ template {
 
 .form__wrapper {
   padding-left: 10px;
+  margin-bottom: 37px;
 }
 
 .form__title {
@@ -1036,12 +1037,11 @@ template {
 }
 
 .form__btn {
-  display: inline-block;
-  margin-bottom: 30px;
-  margin-top: 40px;
-  position: relative;
+  display: block;
   z-index: 96;
-  margin-left: 23%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 45px;
 }
 
 .form__label {
