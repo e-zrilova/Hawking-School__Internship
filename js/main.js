@@ -54,7 +54,7 @@ const swiper = new Swiper('.swiper', {
     // })
     window.addEventListener('resize', resizeHandler)
   }
-}());
+})();
 
 (function () {
 const header = document.querySelector('.header')
@@ -72,7 +72,7 @@ window.addEventListener('scroll', () => {
 window.addEventListener('resize', () => {
   headerHeight = firstSection.clientHeight
 })
-}());
+})();
 
 
 (function(){
@@ -84,7 +84,7 @@ const defaultSelect = () => {
   })
 }
 defaultSelect();
-}());
+})();
 
 (function () {
 const titles = document.querySelectorAll('.js-title')
@@ -106,18 +106,14 @@ if (titles.length && contents.length && (titles.length === contents.length)) {
     })
   })
 }
-}());
-// (function () {
-//   // inputMask
-//   let inputs = document.querySelectorAll('input[type="tel"]')
-//   let im = new Inputmask('+7 (999) 999-99-99')
-//   im.mask(inputs)
+})();
+(function () {
+  // inputMask
+  let inputs = document.querySelectorAll('input[type="tel"]')
+  let im = new Inputmask('+7 (999) 999-99-99')
+  im.mask(inputs)
 
-//   let inputsEmail = document.querySelectorAll('input[type="email"]')
-//   let imE = new Inputmask('{1,20}[.*{1,20}]@*{1,20}.*{2,4}')
-//   imE.mask(inputsEmail)
-
-// }());
+})();
 //validators
 (function() {
   function checkFilled(value) {
