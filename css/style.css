@@ -811,11 +811,12 @@ template {
 }
 
 .swiper-modal-btn {
-  left: 44%;
-  bottom: 103px;
-  position: absolute;
   z-index: 96;
   cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  bottom: 103px;
 }
 
 .about-us {
