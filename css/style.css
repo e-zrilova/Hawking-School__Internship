@@ -1727,7 +1727,7 @@ template {
   .swiper-pagination {
     bottom: 70px !important;
   }
-  .swiper-modal-link {
+  .swiper-modal-btn {
     bottom: 1px;
   }
   .swiper-button {
