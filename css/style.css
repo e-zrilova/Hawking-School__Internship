@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-.link {
+.btn {
   color: #fff;
   font-family: Uni Neue;
   font-style: normal;
@@ -18,9 +18,10 @@
   transition: .3s;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
-.link::after {
+.btn::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -31,9 +32,8 @@
   border: 5px solid rgba(107, 201, 189, 0.5);
 }
 
-.link:hover {
-  font-size: 28px;
-  line-height: 36px;
+.btn:hover {
+  transform: scale(1.25);
   padding-left: 0;
   padding-right: 0;
 }
@@ -509,10 +509,13 @@ template {
   font-size: 18px;
   line-height: 22px;
   cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s;
 }
 
 .navigation__link:hover {
   border-bottom: 2px solid #fff;
+  transition: 0.3s;
 }
 
 .menu-toggle {
@@ -770,6 +773,12 @@ template {
   border-radius: 32.5px;
   width: 15px;
   height: 15px;
+  transition: 0.3s;
+}
+
+.swiper-pagination-bullet:hover {
+  transform: scale(1.25);
+  transition: 0.3s;
 }
 
 .swiper-button {
@@ -801,9 +810,8 @@ template {
   margin-left: 370px;
 }
 
-.swiper-modal-link {
-  left: 50%;
-  transform: translateX(-50%);
+.swiper-modal-btn {
+  left: 44%;
   bottom: 103px;
   position: absolute;
   z-index: 96;
@@ -902,7 +910,7 @@ template {
   letter-spacing: 1.2px;
 }
 
-.accordion__body-link {
+.accordion__body-btn {
   display: flex;
   z-index: 96;
   margin-top: 2px;
@@ -1027,14 +1035,13 @@ template {
   padding-bottom: 11px;
 }
 
-.form__link {
+.form__btn {
   display: inline-block;
   margin-bottom: 30px;
   margin-top: 40px;
   position: relative;
   z-index: 96;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-left: 23%;
 }
 
 .form__label {
@@ -1097,6 +1104,10 @@ template {
 
 .form__wrapper-radiobutton {
   margin-bottom: 20px;
+}
+
+.form__radiobutton-label {
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -1182,6 +1193,15 @@ template {
   background-color: #fff;
   display: none;
   border-radius: 50%;
+}
+
+.form__radiobutton-title, .form__textarea-label {
+  font-family: Uni Neue;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05px;
 }
 
 .visually-hidden:checked + .form-radiobutton:after {
@@ -1279,6 +1299,8 @@ template {
 
 .contacts__phone {
   margin-bottom: 39px;
+  color: #fff;
+  text-decoration: none;
 }
 
 .contacts__adress, .contacts__phone {
@@ -1400,7 +1422,7 @@ template {
     width: 10px;
     height: 10px;
   }
-  .swiper-modal-link {
+  .swiper-modal-btn {
     bottom: 42px;
     font-family: Uni Neue;
     font-style: normal;
@@ -1527,7 +1549,7 @@ template {
     padding-top: 9px;
     padding-bottom: 9px;
   }
-  .accordion__body-link {
+  .accordion__body-btn {
     font-family: Uni Neue;
     font-style: normal;
     font-weight: 800;
@@ -1643,119 +1665,53 @@ template {
 }
 
 @media (max-width: 767px) {
+  .header {
+    min-width: 320px;
+  }
   .header__wrapper {
-    padding-left: 30px;
-    padding-right: 20px;
-    padding-bottom: 30px;
-    padding-top: 34px;
+    padding-left: 20px;
+    padding-right: 10px;
+    padding-bottom: 18px;
+    padding-top: 0;
+    width: 320px;
   }
   .header__menu {
     display: none;
   }
-  .sidebar {
-    position: fixed;
-    top: 102px;
-    right: 0;
-    width: 100%;
-    background-color: #2C2C2C;
-    padding: 30px;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
-    transform: translateX(100%);
-    transition: transform 0.2s;
-    overflow-y: auto;
-    z-index: 101;
-  }
-  .sidebar.visible {
-    transform: translateX(0);
-  }
-  .sidebar {
-    visibility: visible;
-  }
-  .sidebar-nav {
-    margin-bottom: 20px;
-  }
-  .sidebar-menu {
-    margin: 0;
-    border-top: none;
-    list-style: none;
-    padding: 0;
-  }
-  .sidebar-menu-link {
-    text-decoration: none;
-    color: #fff;
-    font-family: Uni Neue;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 22px;
-    padding: 16px 4px;
-    display: inline-block;
-    width: 100%;
-  }
-  .sidebar-menu:hover {
-    background-color: #fffbe6;
-  }
-  .sidebar__social-link {
-    margin-right: 20px;
-    fill: #fff;
-  }
-  .menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 40px;
-    height: 24px;
-    margin-right: 20px;
-    border: none;
-    background-color: transparent;
-  }
-  .menu-toggle.active span:nth-child(2) {
-    display: none;
-  }
-  .menu-toggle.active span:first-child {
-    transform: rotate(45deg);
-  }
-  .menu-toggle.active span:last-child {
-    transform: translate3d(0, 0, 0) rotate(-45deg);
+  .header__logo-link {
     display: block;
-    position: absolute;
-    transition: transform 200ms;
-    width: 30px;
+    margin-right: 0;
+    padding-top: 20px;
   }
-  .menu-toggle span {
-    height: 4px;
-    border-radius: 2px;
-    width: 100%;
-    background-color: #fff;
+  .hamburger {
+    padding-right: 0;
+    padding-bottom: 0;
   }
   .first-screen {
-    padding-top: 100px;
+    padding-top: 72px;
     max-height: 520px;
+  }
+  .first-screen__slide {
+    padding-bottom: 100px;
   }
   .first-screen__text {
     font-family: Uni Neue;
     font-style: normal;
     font-weight: 800;
-    font-size: 72px;
-    line-height: 95px;
-    padding-top: 40px;
-    margin-bottom: 10px;
-  }
-  .first-screen__wrapper {
-    width: 540px;
+    font-size: 36px;
+    line-height: 48px;
   }
   .first-screen__wrapper::after {
-    width: 266px;
-    height: 266px;
+    width: 199px;
+    height: 199px;
     top: 75%;
   }
   .first-screen__description {
-    width: 530px;
     font-family: Uni Neue;
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 30px;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 18px;
     letter-spacing: 1px;
   }
   .swiper-pagination {
