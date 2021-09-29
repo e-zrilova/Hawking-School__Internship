@@ -108,7 +108,11 @@
  <section class="accordion">
       <h2 class="main-title">Наши предложения</h2>
       <div class="accordion__wrapper">
-        <h2 class="accordion__title js-title">Площадка 3.500 мест</h2>
+        <h2 class="accordion__title js-title">
+          <svg class="accordion__icon-closed">
+            <use href="img/sprite.svg#Closed-marker"></use>
+          </svg>
+          Площадка 3.500 мест</h2>
         <div class="accordion__content js-content">
               <ul class="accordion__body-list">
                 <li class="accordion__body-item">
@@ -116,11 +120,15 @@
                 </li>
                 <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
                 <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-                <li class="accordion__body-item"><strong class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+                <li class="accordion__body-item accordion__body-mobile"><strong
+                    class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
               </ul>
               <button href="#" class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
         </div>
-       <h2 class="accordion__title js-title active">Площадка 3.500 мест</h2>
+       <h2 class="accordion__title js-title active">
+         <svg class="accordion__icon-closed">
+           <use href="img/sprite.svg#Closed-marker"></use>
+         </svg>Площадка 3.500 мест</h2>
       <div class="accordion__content js-content active">
         <ul class="accordion__body-list">
           <li class="accordion__body-item">
@@ -128,11 +136,15 @@
           </li>
           <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
           <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-          <li class="accordion__body-item"><strong class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
         </ul>
         <button href="#" class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
       </div>
-        <h2 class="accordion__title js-title ">Площадка 3.500 мест</h2>
+        <h2 class="accordion__title js-title ">
+          <svg class="accordion__icon-closed">
+            <use href="img/sprite.svg#Closed-marker"></use>
+          </svg>Площадка 3.500 мест</h2>
        <div class="accordion__content js-content">
          <ul class="accordion__body-list">
            <li class="accordion__body-item">
@@ -140,11 +152,15 @@
            </li>
            <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
            <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-           <li class="accordion__body-item"><strong class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+           <li class="accordion__body-item accordion__body-mobile"><strong
+               class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
          </ul>
          <button href="#" class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
        </div>
-        <h2 class="accordion__title js-title ">Площадка 3.500 мест</h2>
+        <h2 class="accordion__title js-title ">
+          <svg class="accordion__icon-closed">
+            <use href="img/sprite.svg#Closed-marker"></use>
+          </svg>Площадка 3.500 мест</h2>
         <div class="accordion__content js-content">
           <ul class="accordion__body-list">
             <li class="accordion__body-item">
@@ -152,11 +168,15 @@
             </li>
             <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
             <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-            <li class="accordion__body-item"><strong class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+            <li class="accordion__body-item accordion__body-mobile"><strong
+                class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
           </ul>
-          <button href="#" class="accordion__body-link link">ЗАБРОНИРОВАТЬ</button>
+          <button href="#" class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
         </div>
-         <h2 class="accordion__title js-title ">Площадка 3.500 мест</h2>
+         <h2 class="accordion__title js-title ">
+           <svg class="accordion__icon-closed">
+             <use href="img/sprite.svg#Closed-marker"></use>
+           </svg>Площадка 3.500 мест</h2>
          <div class="accordion__content js-content">
            <ul class="accordion__body-list">
              <li class="accordion__body-item">
@@ -164,41 +184,42 @@
              </li>
              <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
              <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
-             <li class="accordion__body-item"><strong class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+             <li class="accordion__body-item accordion__body-mobile"><strong
+                 class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
            </ul>
            <button href="#" class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
          </div>
       </div>
  </section>
-  <section class="form">
+  <section class="form js-form">
     <h2 class="form__title">ОСТАВЬТЕ ЗАЯВКУ</h2>
-    <form action="#" class="form__form">
+    <form action="#" class="form__form" novalidate="novalidate">
       <div class="form__wrapper">
         <div class="form__wrapper-input">
          <div class="form__wrapper-name">
             <label  class="form__label">
-              Имя:
-              <input type="text" name="fio" data-validate-field="fio" placeholder="Введите имя"
-                class="form__input-name">
+              <span>Имя:</span>
+              <input type="text" name="name" required="required" placeholder="Введите имя"
+                class="form__input-name form__input">
             </label>
          </div>
           <div class="form__wrapper-form">
             <label class="form__label">
-              Телефон:
-              <input value=""  type="tel"  name="tel" data-validate-field="tel" id="request__tel"
+              <span>Телефон:</span>
+              <input value="" type="tel" required="required" name="phone" id="request__tel"
                 placeholder="+7 (___) ___-__-__"
-              class="form__input-tel input-form mask-phone">
+              class="form__input-tel form__input mask-phone">
             </label>
           </div>
         <div class="form__wrapper-email">
             <label class="form__label">
-              Email:
-            <input type="email" name="email" data-validate-field="email" id="requst__email" placeholder="example@mail.com"
-              class="form__input-email input-form js-input-email">
+             <span> Email:</span>
+            <input type="email" name="email" required="required" id="requst__email" placeholder="example@mail.com"
+              class="form__input-email form__input js-input-email">
             </label>
         </div>
          <div class="form__wrapper-select">
-            <label class="form__select-label" >Выберите предложение:
+            <label class="form__select-label"> <span>Выберите предложение:</span>
               <select name="Выберите предложение" class="default">
               <option value="Предложение1">Предложение 1</option>
               <option value="Предложение2">Предложение 2</option>
@@ -222,12 +243,12 @@
         </div>
        <div class="form__wrapper-textarea">
           <p class="form__textarea-label">Комментарий:</p>
-          <textarea name="text" placeholder="Введите комментарий..."
+          <textarea name="textarea" placeholder="Введите комментарий..."
             class="form__textarea"></textarea>
        </div>
         <div class="form__wrapper-check">
           <label>
-            <input type="checkbox" class="custom-checkbox visually-hidden" id="chk1" name="chk1" value="yes">
+            <input type="checkbox" class="custom-checkbox visually-hidden" id="chk1" name="agree" required="required">
             <span class="form-span"> Я даю согласие на обработку персональных данных</span>
           </label>
         </div>
@@ -240,15 +261,21 @@
       <div class="contacts__column">
         <h2 class="contacts__title">КОНТАКТЫ</h2>
         <div class="contacts__info">
-          <p class="contacts__adress">ул. Арбат, 1а, Москва 119019, Россия</p>
-          <a href="tel: +74950000000" class="contacts__phone">+7(495) 000-00-00</a>
-          <a href="mailto:info@mysite.ru" class=" contacts__email">info@mysite.ru</a>
+          <p class="contacts__adress"><svg class="contacts__icon-map">
+              <use href="img/sprite.svg#map"></use>
+            </svg>ул. Арбат, 1а, Москва 119019, Россия</p>
+          <a href="tel: +74950000000" class="contacts__phone"><svg class="contacts__icon-phone">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>+7(495) 000-00-00</a>
+          <a href="mailto:info@mysite.ru" class=" contacts__email"><svg class="contacts__icon-mail">
+              <use href="img/sprite.svg#mail"></use>
+            </svg>info@mysite.ru</a>
         </div>
       </div>
       <div class="map">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.384801810973!2d37.59704791623332!3d55.75181738055314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a4d078690df%3A0x776cfe0f7ad0a8af!2z0YPQuy4g0JDRgNCx0LDRgiwgMdCwLCDQnNC-0YHQutCy0LAsIDExOTAxOQ!5e0!3m2!1sru!2sru!4v1632065429580!5m2!1sru!2sru"
-          width="749" height="463" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          width="100%" height="463" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
@@ -274,9 +301,9 @@
   </footer>
   <script src="js/swiper-bundle.min.js"></script>
   <script src="js/choices.min.js"></script>
-  <script src="js/just-validate.min.js"></script>
   <script src="js/inputmask.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/validate.js"></script>
 </body>
 
 </html>

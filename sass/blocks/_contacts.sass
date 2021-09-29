@@ -19,7 +19,7 @@
     margin-bottom: 45px
     display: flex
     align-items: flex-start
-    max-width: 274px
+    width: 360px
     flex-direction: column
     font-family: Muller;
     font-style: normal;
@@ -32,21 +32,17 @@
     align-items: center
     color: $light
   &__phone
-    margin-bottom: 39px
     color: $light
     text-decoration: none
   &__adress, &__phone 
     display: flex
-    align-items: center  
-  &__adress::before
-    content: url("../../img/map.svg")
+    align-items: center
+    margin-bottom: 39px
+  &__icon-phone, &__icon-mail, &__icon-map
+    fill: $primary
     margin-right: 28px
-  &__phone::before
-    content: url("../../img/phone.svg")
-    margin-right: 28px
-  &__email::before
-    content: url("../../img/mail.svg")
-    margin-right: 28px 
+    width: 35px
+    height: 35px
 .map
   width: 749px
   height: 463px
