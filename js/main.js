@@ -99,10 +99,14 @@ if (titles.length && contents.length && (titles.length === contents.length)) {
   }
 
   titles.forEach((item, index) => {
-    item.addEventListener('click', () => {
+    item.addEventListener('click', (event) => {
+      const isActive = event.target.classList.contains('active');
       removeActive()
-      item.classList.add('active')
-      contents[index].classList.add('active')
+
+      if (!isActive) {
+        item.classList.add('active');
+        contents[index].classList.add('active');
+      }
     })
   })
 }

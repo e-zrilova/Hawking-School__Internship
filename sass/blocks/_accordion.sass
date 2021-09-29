@@ -57,24 +57,12 @@
     margin: 0
     padding: 27px
     padding-left: 31px
-    &::before
-        content: url(../../img/Closed-marker.svg)
-        width: 60px
-        height: 60px
-        padding-right: 38px
-    &:hover::before
-        fill: $light
     &:not(:first-child)
         border-top: none
         
 .accordion__title.active
     background-color: $dark
     border-bottom: none
-    &::before
-        content: url(../../img/Opened-marker.svg)
-        width: 60px
-        height: 60px
-        padding-right: 38px
 .accordion__title.active:not(:first-child)
        border-top: none
 .accordion__wrapper
@@ -94,4 +82,8 @@
     padding-left: 128px
     padding-top: 17px
     padding-bottom: 39px
-    
+.accordion__icon-closed
+    fill: $primary
+    width: 27px
+    height: 27px
+    margin-right: 12px

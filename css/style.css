@@ -778,7 +778,6 @@ template {
 
 .swiper-pagination-bullet:hover {
   transform: scale(1.25);
-  transition: 0.3s;
 }
 
 .swiper-button {
@@ -800,14 +799,14 @@ template {
   right: 18px;
   background-image: url(../img/arrow-next.svg);
   background-size: cover;
-  margin-right: 357px;
+  margin-right: 20%;
 }
 
 .swiper-button--prev {
   left: 18px;
   background-image: url(../img/arrow-prev.svg);
   background-size: cover;
-  margin-left: 370px;
+  margin-left: 20%;
 }
 
 .swiper-modal-btn {
@@ -816,7 +815,8 @@ template {
   display: block;
   margin-right: auto;
   margin-left: auto;
-  bottom: 103px;
+  margin-bottom: 50px;
+  margin-top: -101px;
 }
 
 .about-us {
@@ -944,17 +944,6 @@ template {
   padding-left: 31px;
 }
 
-.accordion__title::before {
-  content: url(../../img/Closed-marker.svg);
-  width: 60px;
-  height: 60px;
-  padding-right: 38px;
-}
-
-.accordion__title:hover::before {
-  fill: #fff;
-}
-
 .accordion__title:not(:first-child) {
   border-top: none;
 }
@@ -962,13 +951,6 @@ template {
 .accordion__title.active {
   background-color: #2C2C2C;
   border-bottom: none;
-}
-
-.accordion__title.active::before {
-  content: url(../../img/Opened-marker.svg);
-  width: 60px;
-  height: 60px;
-  padding-right: 38px;
 }
 
 .accordion__title.active:not(:first-child) {
@@ -996,6 +978,13 @@ template {
   padding-left: 128px;
   padding-top: 17px;
   padding-bottom: 39px;
+}
+
+.accordion__icon-closed {
+  fill: #6BC9BD;
+  width: 27px;
+  height: 27px;
+  margin-right: 12px;
 }
 
 .form {
@@ -1027,7 +1016,8 @@ template {
 }
 
 .form__form {
-  width: 550px;
+  max-width: 550px;
+  width: 100%;
   border: 2px solid #6BC9BD;
   background-color: #2C2C2C;
   color: #fff;
@@ -1069,6 +1059,7 @@ template {
   margin-top: 18px;
   margin-bottom: 16px;
   color: #fff;
+  outline: none;
 }
 
 .form__wrapper-select {
@@ -1101,6 +1092,7 @@ template {
   padding-left: 22px;
   resize: none;
   height: 98px;
+  outline: none;
 }
 
 .form__wrapper-radiobutton {
@@ -1128,6 +1120,8 @@ template {
   font-size: 14px;
   line-height: 17px;
   letter-spacing: 0.05px;
+  margin-bottom: 30px;
+  display: block;
 }
 
 .form-span:before {
@@ -1265,6 +1259,20 @@ template {
   letter-spacing: 0.05px;
 }
 
+.form__input:focus {
+  box-shadow: 1px 1px 3px #6BC9BD, -1px -1px 3px #6BC9BD;
+}
+
+.error-text {
+  font-size: 16px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.form__input.error-input {
+  border: 1px solid lightcoral;
+}
+
 .contacts {
   background-color: #2C2C2C;
 }
@@ -1292,7 +1300,7 @@ template {
   margin-bottom: 45px;
   display: flex;
   align-items: flex-start;
-  max-width: 274px;
+  width: 360px;
   flex-direction: column;
   font-family: Muller;
   font-style: normal;
@@ -1309,7 +1317,6 @@ template {
 }
 
 .contacts__phone {
-  margin-bottom: 39px;
   color: #fff;
   text-decoration: none;
 }
@@ -1317,21 +1324,14 @@ template {
 .contacts__adress, .contacts__phone {
   display: flex;
   align-items: center;
+  margin-bottom: 39px;
 }
 
-.contacts__adress::before {
-  content: url("../../img/map.svg");
+.contacts__icon-phone, .contacts__icon-mail, .contacts__icon-map {
+  fill: #6BC9BD;
   margin-right: 28px;
-}
-
-.contacts__phone::before {
-  content: url("../../img/phone.svg");
-  margin-right: 28px;
-}
-
-.contacts__email::before {
-  content: url("../../img/mail.svg");
-  margin-right: 28px;
+  width: 35px;
+  height: 35px;
 }
 
 .map {
@@ -1525,6 +1525,7 @@ template {
     font-size: 24px;
     line-height: 29px;
     padding-left: 22px;
+    border: #6BC9BD solid 2px;
   }
   .accordion__title::before {
     padding-right: 30px;
@@ -1559,6 +1560,7 @@ template {
     padding-left: 88px;
     padding-top: 9px;
     padding-bottom: 9px;
+    border: #6BC9BD solid 2px;
   }
   .accordion__body-btn {
     font-family: Uni Neue;
@@ -1577,7 +1579,7 @@ template {
     border-bottom: 5px solid #6BC9BD;
   }
   .form__form {
-    width: 514px;
+    max-width: 514px;
     padding-left: 37px;
     padding-right: 47px;
     padding-top: 16px;
@@ -1683,7 +1685,7 @@ template {
     padding-left: 20px;
     padding-right: 10px;
     padding-bottom: 18px;
-    padding-top: 0;
+    padding-top: 10px;
     width: 320px;
   }
   .header__menu {
@@ -1692,7 +1694,8 @@ template {
   .header__logo-link {
     display: block;
     margin-right: 0;
-    padding-top: 20px;
+    width: 151px;
+    height: 34px;
   }
   .hamburger {
     padding-right: 0;
@@ -1724,12 +1727,23 @@ template {
     font-size: 12px;
     line-height: 18px;
     letter-spacing: 1px;
+    width: 100%;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
   }
   .swiper-pagination {
     bottom: 70px !important;
   }
   .swiper-modal-btn {
     bottom: 1px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
   .swiper-button {
     display: none;
@@ -1742,13 +1756,19 @@ template {
     width: 708px;
   }
   .about-us__title {
-    font-size: 30px;
-    line-height: 40px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
     margin-bottom: 20px;
   }
   .about-us__text {
-    font-size: 18px;
-    line-height: 30px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 18px;
     margin-right: 0;
   }
   .about-us__img {
@@ -1758,6 +1778,189 @@ template {
     display: flex;
     align-items: center;
     padding-left: 4px;
+  }
+  .main-title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .accordion {
+    padding: 20px;
+  }
+  .accordion__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border: #6BC9BD solid 1px;
+  }
+  .accordion__body-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .accordion__body-item {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+    margin-bottom: 0;
+  }
+  .accordion__body-strong {
+    margin-right: 15px;
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 48px;
+    letter-spacing: 1.2px;
+  }
+  .accordion__body-btn {
+    margin-left: 0;
+  }
+  .accordion__title::before {
+    width: 26px;
+    height: 27px;
+  }
+  .accordion__title.active::before {
+    width: 26px;
+    height: 27px;
+  }
+  .accordion__content.active {
+    padding-left: 22%;
+    border: #6BC9BD solid 1px;
+  }
+  .accordion__body-mobile {
+    display: none;
+  }
+  .form {
+    background: #6BC9BD;
+    padding-bottom: 0;
+  }
+  .form__btn {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    margin-bottom: 30px;
+  }
+  .form__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  .form__label, .form__select-label {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05px;
+  }
+  .choices__list--single .choices__item {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05px;
+  }
+  .form__input-name, .form__input-tel, .form__input-email {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05px;
+  }
+  .custom-label {
+    margin-right: 10px;
+  }
+  .form-radiobutton {
+    padding-left: 37px;
+  }
+  .form__textarea-label {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05px;
+  }
+  .form__textarea {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    letter-spacing: 0.05px;
+  }
+  .contacts__wrapper {
+    flex-direction: column-reverse;
+  }
+  .contacts__info {
+    width: auto;
+    margin-left: 20px;
+  }
+  .contacts__title {
+    font-family: Uni Neue;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 32px;
+    text-align: center;
+  }
+  .contacts__column {
+    padding-left: 0;
+  }
+  .contacts .contacts__icon-phone, .contacts .contacts__icon-mail, .contacts .contacts__icon-map {
+    margin-right: 28px;
+    width: 41px;
+    height: 41px;
+  }
+  .contacts .contacts__adress, .contacts .contacts__phone, .contacts .contacts__email {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .contacts .contacts__adress {
+    margin-bottom: 18px;
+  }
+  .contacts .contacts__email {
+    margin-top: 11px;
+  }
+  .map {
+    width: 100%;
+    height: 142px;
+    padding-bottom: 45%;
+  }
+  .footer__logo-link {
+    display: none;
+  }
+  .footer__social {
+    display: none;
+  }
+  .footer__copyright {
+    font-family: Muller;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */

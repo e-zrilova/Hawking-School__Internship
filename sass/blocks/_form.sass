@@ -21,7 +21,8 @@
     margin-bottom: 30px
     text-transform: uppercase
   &__form
-    width: 550px
+    max-width: 550px
+    width: 100%
     border: 2px solid #6BC9BD
     background-color: $dark
     color: $light
@@ -57,6 +58,7 @@
     margin-top: 18px
     margin-bottom: 16px
     color: $light
+    outline: none
   &__wrapper-select
     width: 100%
     padding: 9px 0
@@ -85,6 +87,7 @@
     padding-left: 22px
     resize: none
     height: 98px
+    outline: none
   &__wrapper-radiobutton
     margin-bottom: 20px
   &__radiobutton-label
@@ -104,6 +107,8 @@
   font-size: 14px
   line-height: 17px
   letter-spacing: 0.05px
+  margin-bottom: 30px
+  display: block
   &:before
       content: ""
       position: absolute
@@ -206,3 +211,11 @@
     font-size: 18px;
     line-height: 22px;
     letter-spacing: 0.05px;
+.form__input:focus
+   box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
+.error-text
+    font-size: 16px
+    color: red
+    margin-bottom: 10px
+.form__input.error-input
+    border: 1px solid lightcoral
