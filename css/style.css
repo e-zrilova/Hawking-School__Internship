@@ -447,6 +447,9 @@ template {
 .header__wrapper-navigation {
   display: flex;
   margin-left: auto;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .header__social {
@@ -682,7 +685,7 @@ template {
 
 .first-screen {
   position: relative;
-  padding-top: 135px;
+  padding-top: 126px;
 }
 
 .first-screen__slider {
@@ -692,7 +695,7 @@ template {
 .first-screen__slide {
   position: relative;
   padding-top: 50px;
-  padding-bottom: 355px;
+  padding-bottom: 363px;
 }
 
 .first-screen__slide::after {
@@ -765,7 +768,7 @@ template {
 }
 
 .swiper-pagination {
-  bottom: 192px !important;
+  bottom: 140px !important;
 }
 
 .swiper-pagination-bullet {
@@ -781,7 +784,7 @@ template {
 }
 
 .swiper-button {
-  top: 57%;
+  top: 60%;
   width: 36px;
   height: 60px;
   border: none;
@@ -796,14 +799,14 @@ template {
 }
 
 .swiper-button--next {
-  right: 18px;
+  right: 1px;
   background-image: url(../img/arrow-next.svg);
   background-size: cover;
   margin-right: 20%;
 }
 
 .swiper-button--prev {
-  left: 18px;
+  left: 10px;
   background-image: url(../img/arrow-prev.svg);
   background-size: cover;
   margin-left: 20%;
@@ -1028,14 +1031,13 @@ template {
   flex-direction: column;
   align-items: center;
   padding-top: 42px;
-  padding-bottom: 60px;
+  padding-bottom: 55px;
   background-image: url(../../img/form-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .form__wrapper {
-  padding-left: 10px;
   margin-bottom: 37px;
 }
 
@@ -1057,7 +1059,7 @@ template {
   border: 2px solid #6BC9BD;
   background-color: #2C2C2C;
   color: #fff;
-  padding-left: 62px;
+  padding-left: 70px;
   padding-right: 56px;
   padding-top: 45px;
   padding-bottom: 11px;
@@ -1068,7 +1070,7 @@ template {
   z-index: 96;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 45px;
+  margin-bottom: 23px;
 }
 
 .form__label {
@@ -1368,6 +1370,7 @@ template {
   font-weight: normal;
   font-size: 18px;
   line-height: 22px;
+  margin-left: 10px;
   color: #fff;
 }
 
