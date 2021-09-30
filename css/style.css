@@ -988,6 +988,11 @@ template {
   margin-right: 38px;
   position: relative;
   display: block;
+  transition: 0.3s;
+}
+
+.accordion-icon:hover {
+  background-color: #fff;
 }
 
 .accordion-icon:after {
@@ -1153,6 +1158,7 @@ template {
   letter-spacing: 0.05px;
   margin-bottom: 30px;
   display: block;
+  cursor: pointer;
 }
 
 .form-span:before {
@@ -1306,6 +1312,26 @@ template {
 
 .form__input.error-input {
   border: 1px solid lightcoral;
+}
+
+.form-span {
+  transition: 0.3s;
+}
+
+.form-span:hover {
+  color: lavender;
+}
+
+.form-span:hover::before {
+  box-shadow: 1px 1px 3px #6BC9BD, -1px -1px 3px #6BC9BD;
+}
+
+.form-radiobutton:hover {
+  color: lavender;
+}
+
+.form-radiobutton:hover::before {
+  box-shadow: 1px 1px 3px #6BC9BD, -1px -1px 3px #6BC9BD;
 }
 
 .contacts {
@@ -1665,6 +1691,9 @@ template {
   .contacts__phone {
     margin-bottom: 0;
   }
+  .contacts__icon-phone, .contacts__icon-map, .contacts__icon-mail {
+    fill: #fff;
+  }
   .contacts__email {
     margin-top: 20px;
   }
@@ -1874,6 +1903,18 @@ template {
   .accordion__body-mobile {
     display: none;
   }
+  .accordion-icon {
+    width: 27px;
+    height: 27px;
+  }
+  .accordion-icon::before {
+    width: 2px;
+    height: 12px;
+  }
+  .accordion-icon::after {
+    width: 12px;
+    height: 2px;
+  }
   .form {
     background: #6BC9BD;
     padding-bottom: 0;
@@ -1963,6 +2004,9 @@ template {
     margin-right: 28px;
     width: 41px;
     height: 41px;
+  }
+  .contacts .contacts__icon-phone, .contacts .contacts__icon-map, .contacts .contacts__icon-mail {
+    fill: #6BC9BD;
   }
   .contacts .contacts__adress, .contacts .contacts__phone, .contacts .contacts__email {
     font-family: Muller;

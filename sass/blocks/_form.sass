@@ -109,6 +109,7 @@
   letter-spacing: 0.05px
   margin-bottom: 30px
   display: block
+  cursor: pointer
   &:before
       content: ""
       position: absolute
@@ -221,3 +222,14 @@
     margin-bottom: 10px
 .form__input.error-input
     border: 1px solid lightcoral
+.form-span
+  transition: 0.3s
+.form-span:hover
+  color: lavender
+  &::before
+    box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
+.form-radiobutton:hover   
+   color: lavender
+.form-radiobutton:hover 
+  &::before
+    box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary

@@ -23,7 +23,6 @@
       &__item:not(:last-child):after
         margin-left: 10px
         margin-right: 10px
-      
   .swiper
     &-button
       top: 58%
@@ -205,6 +204,8 @@
     margin-top: 0
   .contacts__phone
     margin-bottom: 0
+  .contacts__icon-phone, .contacts__icon-map, .contacts__icon-mail
+    fill: $light
   .contacts__email
     margin-top: 20px
   .contacts__column
@@ -375,6 +376,16 @@
       border-top: none
     &__body-mobile
       display: none
+    &-icon
+        width: 27px
+        height: 27px
+    &-icon::before
+      width: 2px
+      height: 12px
+    &-icon::after
+      width: 12px
+      height: 2px
+        
   .form
     background: $primary
     padding-bottom: 0
@@ -451,6 +462,8 @@
       margin-right: 28px
       width: 41px
       height: 41px
+    .contacts__icon-phone, .contacts__icon-map, .contacts__icon-mail
+       fill: $primary
     .contacts__adress, .contacts__phone, .contacts__email
       font-family: Muller;
       font-style: normal;
