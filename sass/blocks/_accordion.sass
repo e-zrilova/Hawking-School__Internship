@@ -82,8 +82,34 @@
     padding-left: 128px
     padding-top: 17px
     padding-bottom: 39px
-.accordion__icon-closed
-    fill: $primary
-    width: 27px
-    height: 27px
-    margin-right: 12px
+.accordion-icon
+    background-color: $primary
+    width: 60px
+    height: 60px
+    border-radius: 50%
+    margin-right: 38px
+    position: relative
+    display: block
+.accordion-icon:after
+    content: ""
+    width: 30px
+    height: 4px
+    background-color: $dark
+    border-radius: 4px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+.accordion-icon:before
+    content: ""
+    width: 4px
+    height: 30px
+    background-color: $dark
+    border-radius: 4px
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+.accordion__title.active .accordion-icon:before
+    background-color: transparent
