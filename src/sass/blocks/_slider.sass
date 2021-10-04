@@ -1,10 +1,10 @@
 .first-screen
   position: relative
   padding-top: 126px
-  &__slider 
+  &__slider
     width: 100%
   &__slide
-    position: relative  
+    position: relative
     padding-top: 50px
     padding-bottom: 363px
     &::after
@@ -23,25 +23,25 @@
     right: 0
     z-index: 1
   &__text
-      position: relative
-      font-family: Uni Neue;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 120px;
-      line-height: 159px;
-      z-index: 6
-      margin-top: 0
-      margin-bottom: 42px
-      padding-top: 125px
-      text-transform: uppercase
-  &__description
-    font-family: Uni Neue;
     position: relative
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 48px;
-    letter-spacing: 1px;
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 120px
+    line-height: 159px
+    z-index: 6
+    margin-top: 0
+    margin-bottom: 42px
+    padding-top: 125px
+    text-transform: uppercase
+  &__description
+    font-family: Uni Neue
+    position: relative
+    font-style: normal
+    font-weight: 700
+    font-size: 20px
+    line-height: 48px
+    letter-spacing: 1px
     z-index: 6
     text-transform: uppercase
     padding-left: 56px
@@ -54,27 +54,27 @@
     margin: 0 auto
     z-index: 2
     &::after
-     content: ''
-     width: 461px
-     height: 461px
-     position: absolute
-     border-radius: 50%
-     top: 66%
-     left: 51%
-     transform: translate(-50%,-50%)
-     background: rgba(107, 201, 189, 0.5)
-     z-index: 3
+      content: ''
+      width: 461px
+      height: 461px
+      position: absolute
+      border-radius: 50%
+      top: 66%
+      left: 51%
+      transform: translate(-50%,-50%)
+      background: rgba(107, 201, 189, 0.5)
+      z-index: 3
 .swiper
   &-pagination
     bottom: 140px !important
   &-pagination-bullet
-     background: $light
-     border-radius: 32.5px
-     width: 15px
-     height: 15px
-     transition: 0.3s
+    background: $light
+    border-radius: 32.5px
+    width: 15px
+    height: 15px
+    transition: 0.3s
   &-pagination-bullet:hover
-      transform: scale(1.25)
+    transform: scale(1.25)
   &-button
     top: 60%
     width: 36px
@@ -88,21 +88,23 @@
     background-position: center
     background-size: 10px
     background-color: transparent
+    &:hover
+      transform: scale(1.25) translateY(-50%)
     &--next
-       right: 1px
-       background-image: url(../img/arrow-next.svg)
-       background-size: cover
-       margin-right: 20%
+      right: 1px
+      background-image: url(../img/arrow-next.svg)
+      background-size: cover
+      margin-right: 20%
     &--prev
       left: 10px
       background-image: url(../img/arrow-prev.svg)
       background-size: cover
-      margin-left: 20%     
+      margin-left: 20%
   &-modal-btn
-    z-index: 96;
-    cursor: pointer;
+    z-index: 96
+    cursor: pointer
     display: block
     margin-right: auto
-    margin-left: auto     
+    margin-left: auto
     margin-bottom: 50px
     margin-top: -101px

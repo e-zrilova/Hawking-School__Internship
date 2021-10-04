@@ -1,0 +1,494 @@
+@media (max-width: 1200px)
+  .container
+    max-width: 960px
+  .header
+    min-width: 768px
+    &__wrapper
+      margin: 0
+      padding-left: 31px
+      width: 100%
+      padding-right: 20px
+      padding-bottom: 20px
+    &__social
+      display: none
+    &__logo
+      width: 222px
+      height: 50px
+    &__logo-link
+      display: block
+  .navigation
+    margin-left: 0
+    &__list
+      margin-left: 0
+      &__item:not(:last-child):after
+        margin-left: 10px
+        margin-right: 10px
+  .swiper
+    &-button
+      top: 58%
+    &-button--prev
+      margin-left: 13px
+      width: 14px
+      height: 23px
+    &-button--next
+      margin-right: 13px
+      width: 14px
+      height: 23px
+    &-pagination
+      bottom: 112px !important
+      &-bullet
+        width: 10px
+        height: 10px
+    &-modal-btn
+      bottom: 42px
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      letter-spacing: 1.2px
+  .first-screen
+    padding-top: 100px
+    &__slide
+      padding-top: 37px
+      padding-bottom: 154px
+    &__wrapper::after
+      width: 266px
+      height: 266px
+      top: 67%
+      left: 50%
+    &__text
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 72px
+      line-height: 95px
+      padding-top: 0
+      margin-bottom: 32px
+    &__description
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 16px
+      line-height: 30px
+      letter-spacing: 1px
+      margin-right: auto
+      margin-left: auto
+      margin-top: 0
+      width: 612px
+  .about-us
+    padding-top: 44px
+    padding-bottom: 40px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 30px
+      line-height: 40px
+    &__container
+      display: flex
+    &__text
+      margin-right: 13px
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: bold
+      font-size: 18px
+      line-height: 30px
+      margin-top: 0
+    &__img
+      max-width: 266px
+      max-height: 376px
+    &__content
+      padding-top: 17px
+  .main-title
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 36px
+    line-height: 48px
+    margin-top: 0
+  .accordion
+    &__wrapper
+      margin-top: 0
+      margin-bottom: 7px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 500
+      font-size: 24px
+      line-height: 29px
+      padding-left: 22px
+      border: #6BC9BD solid 2px
+    &__title::before
+      padding-right: 30px
+    &__title.active::before
+      padding-right: 39px
+    &__body-list
+      column-gap: 37px
+    &__body-item
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 500
+      font-size: 18px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 1.2px
+      margin-bottom: 14px
+    &__body-strong
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      letter-spacing: 1.2px
+      margin-right: 33px
+    &__content.active
+      margin: 0
+      padding-left: 88px
+      padding-top: 9px
+      padding-bottom: 9px
+      border: #6BC9BD solid 2px
+    &__body-btn
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      letter-spacing: 1.2px
+      margin-left: 4%
+      margin-bottom: 3%
+      transform: translateY(-25%)
+  .form
+    padding-top: 16px
+    padding-bottom: 74px
+    border-bottom: 5px solid $primary
+    &__form
+      max-width: 514px
+      padding-left: 37px
+      padding-right: 47px
+      padding-top: 16px
+      padding-bottom: 0
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 18px
+  .form__input-name, .form__input-tel, .form__input-email
+    margin-top: 15px
+  .form__wrapper-select
+    padding: 0
+  .choices__inner
+    padding-left: 9px
+  .choices__list--single .choices__item
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.05px
+  .choices__list--single
+    padding-left: 0
+  .form__radiobutton-title
+    margin-bottom: 22px
+  .contacts__title
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 30px
+    line-height: 40px
+    margin-bottom: 23px
+  .contacts__adress, .contacts__phone
+    margin-top: 0
+  .contacts__phone
+    margin-bottom: 0
+  .contacts__icon-phone, .contacts__icon-map, .contacts__icon-mail
+    fill: $light
+  .contacts__email
+    margin-top: 20px
+  .contacts__column
+    padding-left: 27px
+  .contacts__info
+    font-family: Muller
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    margin-left: 6px
+  .map
+    width: 383px
+    height: 368px
+  .footer
+    padding-top: 14px
+  .footer__wrapper
+    padding-left: 32px
+    padding-right: 30px
+  .footer__logo
+    width: 222px
+    height: 50px
+  .footer__copyright
+    font-family: Muller
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 19px
+    text-align: right
+    width: 220px
+  .footer__social
+    display: block
+    margin-left: 9px
+  .header__social-link
+    margin-right: 18px
+@media (max-width: 767px)
+  .header
+    min-width: 320px
+    &__wrapper
+      padding-left: 20px
+      padding-right: 10px
+      padding-top: 10px
+      width: 100%
+    &__menu
+      display: none
+    &__logo-link
+      display: block
+      margin-right: 0
+      width: 151px
+      height: 34px
+  .hamburger
+    padding-right: 0
+    padding-bottom: 0
+  .first-screen
+    padding-top: 70px
+    max-height: 520px
+    &__slide
+      padding-bottom: 100px
+    &__text
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 36px
+      line-height: 48px
+    &__wrapper::after
+      width: 199px
+      height: 199px
+      top: 75%
+    &__description
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
+      width: 100%
+      padding: 0
+      padding-left: 10px
+      padding-right: 10px
+  .swiper
+    &-pagination
+      bottom: 5% !important
+    &-modal-btn
+      bottom: 1px
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 14px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 0.5px
+    &-button
+      display: none
+  .about-us
+    padding-top: 64px
+    margin-right: 0px
+    &__container
+      width: 708px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 24px
+      line-height: 32px
+      margin-bottom: 20px
+    &__text
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 18px
+      margin-right: 0
+    &__img
+      display: none
+  .social-icon
+    display: flex
+    align-items: center
+    padding-left: 4px
+  .main-title
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 24px
+    line-height: 32px
+  .accordion
+    padding: 20px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 500
+      font-size: 16px
+      line-height: 20px
+      border: #6BC9BD solid 1px
+    &__body-list
+      display: flex
+      flex-direction: column
+      align-items: flex-start
+    &__body-item
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 48px
+      letter-spacing: 1.2px
+      margin-bottom: 0
+    &__body-strong
+      margin-right: 15px
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 14px
+      line-height: 48px
+      letter-spacing: 1.2px
+    &__body-btn
+      margin-left: 0
+    &__title::before
+      width: 26px
+      height: 27px
+    &__title.active::before
+      width: 26px
+      height: 27px
+    &__content.active
+      padding-left: 22%
+      border: #6BC9BD solid 1px
+      border-top: none
+    &__body-mobile
+      display: none
+    &-icon
+      width: 27px
+      height: 27px
+    &-icon::before
+      width: 3px
+      height: 13px
+    &-icon::after
+      width: 13px
+      height: 3px
+  .form
+    padding-bottom: 0
+    &__btn
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 14px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 0.5px
+      margin-bottom: 30px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 24px
+      line-height: 32px
+    &__label, &__select-label
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
+  .choices__list--single .choices__item
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
+  .form__input-name, .form__input-tel, .form__input-email
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
+  .custom-label
+    margin-right: 10px
+  .form-radiobutton
+    padding-left: 37px
+  .form__textarea-label
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
+  .form__textarea
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
+  .contacts
+    display: flex
+    align-items: center
+    &__wrapper
+      flex-direction: column-reverse
+    &__info
+      width: auto
+      margin-left: 20px
+    &__title
+      font-family: Uni Neue
+      font-style: normal
+      font-weight: 800
+      font-size: 24px
+      line-height: 32px
+      text-align: center
+    &__column
+      padding-left: 0
+    .contacts__icon-phone, .contacts__icon-mail, .contacts__icon-map
+      margin-right: 28px
+      width: 41px
+      height: 41px
+    .contacts__icon-phone, .contacts__icon-map, .contacts__icon-mail
+      fill: $primary
+      flex: none
+    .contacts__adress, .contacts__phone, .contacts__email
+      font-family: Muller
+      font-style: normal
+      font-weight: normal
+      font-size: 14px
+      line-height: 17px
+    .contacts__adress
+      margin-bottom: 18px
+    .contacts__email
+      margin-top: 11px
+  .map
+    width: 100%
+    height: 141px
+    padding-bottom: 45%
+  .footer
+    &__logo-link
+      display: none
+    &__social
+      display: none
+    &__copyright
+      font-family: Muller
+      font-style: normal
+      font-weight: normal
+      font-size: 12px
+      line-height: 14px
+      text-align: center
+      margin-left: auto
+      margin-right: auto
+@media (max-width: 514px)
+  .form
+    background: $primary

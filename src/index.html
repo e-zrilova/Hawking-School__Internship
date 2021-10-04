@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intership 2012</title>
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/choices.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__wrapper">
+      <a href="#" class="header__logo-link"><img src="img/logo.png" alt="icon: logo" class="header__logo logo"></a>
+      <div class="header__wrapper-navigation js-header__wrapper-navigation">
+        <nav class="header__navigation navigation">
+          <ul class="navigation__list">
+            <li class="navigation__item js-menu-item"><a href="#about-us" class="navigation__link">О НАС</a></li>
+            <li class="navigation__item js-menu-item"><a href="#price" class="navigation__link">ПРЕДЛОЖЕНИЯ</a></li>
+            <li class="navigation__item js-menu-item"><a href="#contacts" class="navigation__link">КОНТАКТЫ</a></li>
+          </ul>
+        </nav>
+        <nav class="header__social">
+          <a href="https://www.facebook.com/" target="blank" class="social-link">
+            <svg class="social-fb">
+              <use href="img/sprite.svg#facebook"></use>
+            </svg>
+          </a>
+          <a href="https://vk.com/" target="blank" class="social-link">
+            <svg class="social-vk">
+              <use href="img/sprite.svg#vk"></use>
+            </svg>
+          </a>
+        </nav>
+      </div>
+
+      <div class="hamburger hamburger--squeeze js-menu-toggle">
+        <div class="hamburger-box">
+          <div class="hamburger-inner"></div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="first-screen js-first-screen">
+    <!-- Slider main container -->
+    <div class="swiper first-screen__slider">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide first-screen__slide">
+          <div class="first-screen__wrapper">
+            <h2 class="first-screen__text">CONCERT HOME</h2>
+            <p class="first-screen__description">
+              ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
+              ВЫРАВНИВАНИЕ
+              ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
+            </p>
+          </div>
+          <img src="img/slide1.jpg" alt="photo: slide1" class="first-screen__img">
+        </div>
+        <div class="swiper-slide first-screen__slide">
+          <div class="first-screen__wrapper">
+            <h2 class="first-screen__text">CONCERT HOME</h2>
+            <p class="first-screen__description">
+              ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
+              ВЫРАВНИВАНИЕ
+              ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
+            </p>
+          </div>
+          <img src="img/slide1.jpg" alt="photo: slide2" class="first-screen__img">
+        </div>
+        <div class="swiper-slide first-screen__slide">
+          <div class="first-screen__wrapper">
+            <h2 class="first-screen__text">CONCERT HOME</h2>
+            <p class="first-screen__description">
+              ТЕКСТ БАННЕРА МОЖЕТ ВКЛЮЧАТЬ В СЕБЯ НЕСКОЛЬКО ПРЕДЛОЖЕНИЙ.
+              ВЫРАВНИВАНИЕ
+              ПО ЦЕНТРУ. ТЕКСТОВЫЙ БЛОК НА ДЕСКТОПЕ
+            </p>
+          </div>
+          <img src="img/slide1.jpg" alt="photo: slide3" class="first-screen__img">
+        </div>
+      </div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination"></div>
+    <button class="swiper-modal-btn btn js-open-modal">ОСТАВИТЬ ЗАЯВКУ</button>
+    <!-- If we need navigation buttons -->
+    <button class="swiper-button swiper-button--prev"></button>
+    <button class="swiper-button swiper-button--next"></button>
+  </div>
+  <div class="modal js-modal">
+    <div class="modal__wrapper">
+      <button class="modal__close js-close-modal"> <svg class="modal-icon ">
+          <use href="img/sprite.svg#modal-icon"></use>
+        </svg></button>
+      <form action="#" class="modal__form form__form js-modal-form">
+        <div class="modal__wrapper-content">
+          <h1 class="modal__title">Авторизация</h1>
+        </div>
+        <div class="form__wrapper-name">
+          <label class="form__label">
+            <span>Логин</span>
+            <input type="text" name="name" placeholder="Введите логин" class="form__input-name form__input js-field">
+          </label>
+        </div>
+        <div class="form__wrapper-password">
+          <label class="form__label">
+            <span>Пароль</span>
+            <input type="password" name="password" placeholder="Введите пароль" class="form__input-name form__input js-field">
+          </label>
+        </div>
+        <button class="form__btn btn">Отправить</button>
+      </form>
+      <!-- ====== -->
+    </div>
+  </div>
+  <section class="about-us" id="about-us">
+    <div class="about-us__container container">
+      <div class="about-us__content">
+        <h2 class="about-us__title">ЗАГОЛОВОК</h2>
+        <p class="about-us__text">Таким образом дальнейшее развитие различных форм деятельности в&nbsp;значительной
+          степени обуславливает создание системы обучения кадров, соответствует насущным потребностям. Задача
+          организации,
+          в&nbsp;особенности&nbsp;же рамки и&nbsp;место обучения кадров в&nbsp;значительной степени обуславливает
+          создание
+          системы обучения кадров, соответствует.</p>
+      </div>
+      <img src="img/h@3x.png" alt="photo: about-us" class="about-us__img">
+    </div>
+
+  </section>
+  <section class="accordion">
+    <h2 class="main-title">Наши предложения</h2>
+    <div class="accordion__wrapper">
+      <h2 class="accordion__title js-title">
+        <span class="accordion-icon"></span>
+        Площадка 3.500 мест</h2>
+      <div class="accordion__content js-content">
+        <ul class="accordion__body-list">
+          <li class="accordion__body-item">
+            <strong class="accordion__body-strong">ГОРОД:</strong>Город
+          </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+        </ul>
+        <button  class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
+      </div>
+      <h2 class="accordion__title js-title active">
+        <span class="accordion-icon"></span>Площадка 3.500 мест</h2>
+      <div class="accordion__content js-content active">
+        <ul class="accordion__body-list">
+          <li class="accordion__body-item">
+            <strong class="accordion__body-strong">ГОРОД:</strong>Город
+          </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+        </ul>
+        <button class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
+      </div>
+      <h2 class="accordion__title js-title ">
+        <span class="accordion-icon"></span>Площадка 3.500 мест</h2>
+      <div class="accordion__content js-content">
+        <ul class="accordion__body-list">
+          <li class="accordion__body-item">
+            <strong class="accordion__body-strong">ГОРОД:</strong>Город
+          </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+        </ul>
+        <button class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
+      </div>
+      <h2 class="accordion__title js-title ">
+        <span class="accordion-icon"></span>Площадка 3.500 мест</h2>
+      <div class="accordion__content js-content">
+        <ul class="accordion__body-list">
+          <li class="accordion__body-item">
+            <strong class="accordion__body-strong">ГОРОД:</strong>Город
+          </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+        </ul>
+        <button  class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
+      </div>
+      <h2 class="accordion__title js-title ">
+        <span class="accordion-icon"></span>Площадка 3.500 мест</h2>
+      <div class="accordion__content js-content">
+        <ul class="accordion__body-list">
+          <li class="accordion__body-item">
+            <strong class="accordion__body-strong">ГОРОД:</strong>Город
+          </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ЦЕНА:</strong>250 000 </li>
+          <li class="accordion__body-item"><strong class="accordion__body-strong">ПЛОЩАДЬ:</strong>1000 кв.м.</li>
+          <li class="accordion__body-item accordion__body-mobile"><strong
+              class="accordion__body-strong">НАЗВАНИЕ:</strong>Название</li>
+        </ul>
+        <button  class="accordion__body-btn btn">ЗАБРОНИРОВАТЬ</button>
+      </div>
+    </div>
+  </section>
+  <section class="form js-form">
+    <h2 class="form__title">ОСТАВЬТЕ ЗАЯВКУ</h2>
+    <form action="#" class="form__form js-form-form" novalidate="novalidate">
+      <div class="form__wrapper">
+        <div class="form__wrapper-input">
+          <div class="form__wrapper-name">
+            <label class="form__label">
+              <span>Имя:</span>
+              <input type="text" name="name" required="required" placeholder="Введите имя"
+                class="form__input-name form__input js-field">
+            </label>
+          </div>
+          <div class="form__wrapper-form">
+            <label class="form__label">
+              <span>Телефон:</span>
+              <input value="" type="tel" required="required" name="phone" id="request__tel"
+                placeholder="+7 (___) ___-__-__" class="form__input-tel form__input mask-phone js-field">
+            </label>
+          </div>
+          <div class="form__wrapper-email">
+            <label class="form__label">
+              <span> Email:</span>
+              <input type="email" name="email" required="required" id="requst__email" placeholder="example@mail.com"
+                class="form__input-email form__input js-input-email js-field">
+            </label>
+          </div>
+          <div class="form__wrapper-select">
+            <label class="form__select-label"> <span>Выберите предложение:</span>
+              <select name="Выберите предложение" class="default js-field">
+                <option value="Предложение1">Предложение 1</option>
+                <option value="Предложение2">Предложение 2</option>
+                <option value="Предложение3">Предложение 3</option>
+                <option value="Предложение4">Предложение 4</option>
+              </select>
+            </label>
+          </div>
+        </div>
+        <div class="form__wrapper-radiobutton">
+          <p class="form__radiobutton-title">Пол:</p>
+          <label class="form__radiobutton-label custom-label">
+            <input id="radio-2" type="radio" name="gender" value="2"
+              class="form__radiobutton custom-radiobutton visually-hidden js-field">
+            <span class="form-radiobutton"> Мужской </span>
+          </label>
+          <label class="form__radiobutton-label">
+            <input id="radio-1" type="radio" name="gender" value="1" checked
+              class="form__radiobutton custom-radiobutton visually-hidden js-field">
+            <span class="form-radiobutton"> Женский </span>
+          </label>
+        </div>
+        <div class="form__wrapper-textarea">
+          <p class="form__textarea-label">Комментарий:</p>
+          <textarea name="comment" placeholder="Введите комментарий..." class="form__textarea js-field"></textarea>
+        </div>
+        <div class="form__wrapper-check">
+          <label>
+            <input type="checkbox" class="custom-checkbox visually-hidden js-field" id="chk1" name="agree"
+              required="required">
+            <span class="form-span"> Я даю согласие на обработку персональных данных</span>
+          </label>
+        </div>
+      </div>
+      <button class="form__btn btn">Оставить заявку</button>
+    </form>
+  </section>
+  <section class="contacts" id="contacts">
+    <div class="contacts__wrapper">
+      <div class="contacts__column">
+        <h2 class="contacts__title">КОНТАКТЫ</h2>
+        <div class="contacts__info">
+          <p class="contacts__adress"><svg class="contacts__icon-map">
+              <use href="img/sprite.svg#map"></use>
+            </svg>ул. Арбат, 1а, Москва 119019, Россия</p>
+          <a href="tel:+74950000000" class="contacts__phone"><svg class="contacts__icon-phone">
+              <use href="img/sprite.svg#phone"></use>
+            </svg>+7(495) 000-00-00</a>
+          <a href="mailto:info@mysite.ru" class=" contacts__email"><svg class="contacts__icon-mail">
+              <use href="img/sprite.svg#mail"></use>
+            </svg>info@mysite.ru</a>
+        </div>
+      </div>
+      <div class="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.384801810973!2d37.59704791623332!3d55.75181738055314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a4d078690df%3A0x776cfe0f7ad0a8af!2z0YPQuy4g0JDRgNCx0LDRgiwgMdCwLCDQnNC-0YHQutCy0LAsIDExOTAxOQ!5e0!3m2!1sru!2sru!4v1632065429580!5m2!1sru!2sru"
+          width="749" height="463" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__wrapper">
+      <a href="#" class="footer__logo-link"><img src="img/logo.png" alt="icon: logo" class="footer__logo logo"></a>
+      <nav class="footer__social">
+        <a href="https://www.facebook.com/" target="blank" class="social-link">
+          <svg class="social-fb">
+            <use href="img/sprite.svg#facebook"></use>
+          </svg>
+        </a>
+        <a href="https://vk.com/" target="blank" class="social-link">
+          <svg class="social-vk">
+            <use href="img/sprite.svg#vk"></use>
+          </svg>
+        </a>
+      </nav>
+      <p class="footer__copyright">© 2019 Concert Home. Сайт создан в <a target="blank" href="https://hawkingbros.com/"
+          class="footer__company-link">Hawking
+          Bros.</a> </p>
+    </div>
+  </footer>
+  <script src="./js/modal.js"></script>
+  <script src="./js/main.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/accordion.js"></script>
+</body>
+
+</html>

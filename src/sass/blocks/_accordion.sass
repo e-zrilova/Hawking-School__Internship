@@ -1,4 +1,4 @@
-.accordion 
+.accordion
     background-color: $dark
     color: $light
     padding: 35px
@@ -15,7 +15,7 @@
         &-item
             max-width: 320px
             margin-bottom: 30px
-            font-family: Uni Neue;
+            font-family: Uni Neue
             font-style: normal
             font-weight: 500
             font-size: 30px
@@ -34,13 +34,15 @@
             display: flex
             z-index: 96
             margin-top: 2px
+        &-btn:hover
+            transform: scale(1.2)
 .main-title
     text-align: center
-    font-family: Uni Neue;
-    font-style: normal;
-    font-weight: 800;
-    font-size: 60px;
-    line-height: 79px;
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 60px
+    line-height: 79px
     text-transform: uppercase
     color: $light
     margin-top: 16px
@@ -59,12 +61,12 @@
     padding-left: 31px
     &:not(:first-child)
         border-top: none
-        
+
 .accordion__title.active
     background-color: $dark
     border-bottom: none
 .accordion__title.active:not(:first-child)
-       border-top: none
+    border-top: none
 .accordion__wrapper
     max-width: 1140px
     margin-top: 54px
@@ -95,8 +97,8 @@
     background-color: $light
 .accordion-icon:after
     content: ""
-    width: 30px
-    height: 4px
+    width: 28px
+    height: 6px
     background-color: $dark
     border-radius: 4px
     position: absolute
@@ -105,14 +107,15 @@
     transform: translate(-50%, -50%)
 .accordion-icon:before
     content: ""
-    width: 4px
-    height: 30px
+    width: 6px
+    height: 28px
     background-color: $dark
     border-radius: 4px
     position: absolute
     top: 50%
     left: 50%
     transform: translate(-50%, -50%)
+    transition: .3s
 
 .accordion__title.active .accordion-icon:before
-    background-color: transparent
+    transform: translate(-50%, -50%) rotate(90deg)
