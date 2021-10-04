@@ -18,8 +18,7 @@ const jsBuild = () => {
       format: 'esm',
       bundle: true,
       sourcemap: !isProd,
-      minify: isProd,
-      external: ['inputmask', 'swiper', 'choices.js']
+      minify: isProd
     }))
     .pipe(dest('./dist'))
     .pipe(browserSync.stream())
