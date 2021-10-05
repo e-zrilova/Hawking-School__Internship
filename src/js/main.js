@@ -6,6 +6,7 @@ import Swiper, {
   Keyboard
 } from 'swiper';
 import { createForm } from './modules/form';
+import {initModal} from './modules/modal';
 
  let inputs = document.querySelectorAll('input[type="tel"]')
  let im = new Inputmask('+7 (999) 999-99-99')
@@ -42,7 +43,9 @@ const defaultSelect = () => {
 }
 defaultSelect();
 
+const closeModal = initModal()
+
 const form = document.querySelector('.js-form-form')
 createForm(form);
 const modalForm = document.querySelector('.js-modal-form');
-createForm(modalForm);
+createForm(modalForm, closeModal);

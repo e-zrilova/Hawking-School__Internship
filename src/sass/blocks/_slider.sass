@@ -89,17 +89,19 @@
     background-size: 10px
     background-color: transparent
     &:hover
-      transform: scale(1.25) translateY(-50%)
+      transform: scale(1.1) translateY(-50%)
     &--next
       right: 1px
       background-image: url(../img/arrow-next.svg)
       background-size: cover
       margin-right: 20%
+      transition: 0.3s
     &--prev
       left: 10px
       background-image: url(../img/arrow-prev.svg)
       background-size: cover
       margin-left: 20%
+      transition: 0.3s
   &-modal-btn
     z-index: 96
     cursor: pointer

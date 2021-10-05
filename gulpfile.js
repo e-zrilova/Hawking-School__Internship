@@ -30,7 +30,9 @@ const html = () => src('./src/index.html')
 
 const styles = () => src('./src/sass/style.sass')
   .pipe(gp.if(!isProd, gp.sourcemaps.init()))
-  .pipe(sass())
+  .pipe(sass({
+    includePaths: ['node_modules']
+  }))
   .pipe(gp.groupCssMediaQueries())
   .pipe(gp.if(isProd, gp.autoprefixer()))
   .pipe(gp.if(isProd, gp.cleanCss({
@@ -62,10 +64,6 @@ const img = () => src('./src/img/*')
   .pipe(dest('./dist/img'))
   .pipe(browserSync.stream())
 
-const vendorCss = () => src('./src/css/*.css')
-  .pipe(dest('./dist/css'))
-  .pipe(browserSync.stream())
-
 const browser = () => browserSync.init({
   server: {
     baseDir: './dist/'
@@ -80,7 +78,7 @@ const watchFiles = () => {
   watch('./src/index.html', html);
 }
   
-const build = parallel(html, fonst, img, jsBuild, vendorCss, styles);
+const build = parallel(html, fonst, img, jsBuild, styles);
 const dev = parallel(build, watchFiles, browser)
 
 exports.build = build;

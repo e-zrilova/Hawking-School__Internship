@@ -39,16 +39,26 @@ import { validate } from "./validate"
     validateField(target);
   };
 
-  export const createForm = (formElement) => {
+  export const createForm = (formElement, onSubmit) => {
     if (!formElement) {
       throw new Error('Форма не передана');
     }
     const inputs = formElement?.querySelectorAll('.js-field');
-
+    const activateValidation = () => {
+      if (inputs.length) {
+        inputs.forEach(input => {
+          if (INPUT_TAGS.includes(input.tagName)) {
+            input.addEventListener('input', handleChange)
+          } else {
+            input.addEventListener('change', handleChange)
+          }
+        })
+      }
+    }
     formElement.addEventListener('submit', (event) => {
 
       event.preventDefault()
-
+      activateValidation()
       if (inputs.length) {
         let isFormError = false;
 
@@ -63,18 +73,8 @@ import { validate } from "./validate"
         if (isFormError) {
           alert('Ошибка')
         } else {
-          alert('Форма отправлена')
+          onSubmit && onSubmit()
         }
       }
     })
-
-    if (inputs.length) {
-      inputs.forEach(input => {
-        if (INPUT_TAGS.includes(input.tagName)) {
-          input.addEventListener('input', handleChange)
-        } else {
-          input.addEventListener('change', handleChange)
-        }
-      })
-    }
   }

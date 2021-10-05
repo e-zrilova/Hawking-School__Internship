@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Intership 2012</title>
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="css/choices.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
 </head>
@@ -20,7 +18,7 @@
         <nav class="header__navigation navigation">
           <ul class="navigation__list">
             <li class="navigation__item js-menu-item"><a href="#about-us" class="navigation__link">О НАС</a></li>
-            <li class="navigation__item js-menu-item"><a href="#price" class="navigation__link">ПРЕДЛОЖЕНИЯ</a></li>
+            <li class="navigation__item js-menu-item"><a href="#accordion" class="navigation__link">ПРЕДЛОЖЕНИЯ</a></li>
             <li class="navigation__item js-menu-item"><a href="#contacts" class="navigation__link">КОНТАКТЫ</a></li>
           </ul>
         </nav>
@@ -98,11 +96,11 @@
       <button class="modal__close js-close-modal"> <svg class="modal-icon ">
           <use href="img/sprite.svg#modal-icon"></use>
         </svg></button>
-      <form action="#" class="modal__form form__form js-modal-form">
+      <form action="#" class="modal__form form__form--modification js-modal-form">
         <div class="modal__wrapper-content">
           <h1 class="modal__title">Авторизация</h1>
         </div>
-        <div class="form__wrapper-name">
+        <div class="form__wrapper-name form__name--modification">
           <label class="form__label">
             <span>Логин</span>
             <input type="text" name="name" placeholder="Введите логин" class="form__input-name form__input js-field">
@@ -114,7 +112,7 @@
             <input type="password" name="password" placeholder="Введите пароль" class="form__input-name form__input js-field">
           </label>
         </div>
-        <button class="form__btn btn">Отправить</button>
+        <button class="form__btn form-modal__btn btn">Отправить</button>
       </form>
       <!-- ====== -->
     </div>
@@ -134,7 +132,7 @@
     </div>
 
   </section>
-  <section class="accordion">
+  <section class="accordion" id="accordion">
     <h2 class="main-title">Наши предложения</h2>
     <div class="accordion__wrapper">
       <h2 class="accordion__title js-title">
@@ -212,7 +210,7 @@
   </section>
   <section class="form js-form">
     <h2 class="form__title">ОСТАВЬТЕ ЗАЯВКУ</h2>
-    <form action="#" class="form__form js-form-form" novalidate="novalidate">
+    <form action="#" class="form__form js-form-form form__form--modification" novalidate="novalidate">
       <div class="form__wrapper">
         <div class="form__wrapper-input">
           <div class="form__wrapper-name">
@@ -285,7 +283,7 @@
             </svg>ул. Арбат, 1а, Москва 119019, Россия</p>
           <a href="tel:+74950000000" class="contacts__phone"><svg class="contacts__icon-phone">
               <use href="img/sprite.svg#phone"></use>
-            </svg>+7(495) 000-00-00</a>
+            </svg>+7 (495) 000-00-00</a>
           <a href="mailto:info@mysite.ru" class=" contacts__email"><svg class="contacts__icon-mail">
               <use href="img/sprite.svg#mail"></use>
             </svg>info@mysite.ru</a>
@@ -318,7 +316,6 @@
           Bros.</a> </p>
     </div>
   </footer>
-  <script src="./js/modal.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/menu.js"></script>

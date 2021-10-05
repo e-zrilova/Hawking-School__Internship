@@ -167,15 +167,11 @@
       margin-bottom: 3%
       transform: translateY(-25%)
   .form
-    padding-top: 16px
+    padding-top: 20px
     padding-bottom: 74px
     border-bottom: 5px solid $primary
     &__form
       max-width: 514px
-      padding-left: 37px
-      padding-right: 47px
-      padding-top: 16px
-      padding-bottom: 0
     &__title
       font-family: Uni Neue
       font-style: normal
@@ -225,10 +221,11 @@
     line-height: 19px
     margin-left: 6px
   .map
-    width: 383px
+    width: 50%
     height: 368px
   .footer
     padding-top: 14px
+    padding-bottom: 14px
   .footer__wrapper
     padding-left: 32px
     padding-right: 30px
@@ -248,6 +245,21 @@
     margin-left: 9px
   .header__social-link
     margin-right: 18px
+  .modal__form
+    max-width: 470px
+    width: 100%
+    padding: 40px
+  .form__wrapper-password, .form__name--modification
+    max-width: 440px
+    width: 100%
+  .modal__close
+    top: 37px
+    right: 43px
+    width: 25px
+    height: 25px
+  .modal-icon
+    width: 25px
+    height: 25px
 @media (max-width: 767px)
   .header
     min-width: 320px
@@ -347,6 +359,8 @@
       font-size: 16px
       line-height: 20px
       border: #6BC9BD solid 1px
+      padding-top: 18px
+      padding-bottom: 18px
     &__body-list
       display: flex
       flex-direction: column
@@ -402,11 +416,11 @@
       font-family: Uni Neue
       font-style: normal
       font-weight: 800
-      font-size: 14px
+      font-size: 18px
       line-height: 48px
       text-align: center
-      letter-spacing: 0.5px
-      margin-bottom: 30px
+      letter-spacing: 1.2px
+      margin-bottom: 0
     &__title
       font-family: Uni Neue
       font-style: normal
@@ -504,6 +518,21 @@
       text-align: center
       margin-left: auto
       margin-right: auto
-@media (max-width: 514px)
+  .form-modal__btn
+    font-family: Uni Neue
+    font-style: normal
+    font-weight: 800
+    font-size: 24px
+    line-height: 48px
+    text-align: center
+    letter-spacing: 1.2px 
+    margin-bottom: 0
+@media (max-width: 516px)
   .form
     background: $primary
+  .form__form
+     border-left: none
+     border-right: none
+@media (min-width: 516px) and (max-width: 767px)
+  .form
+    padding-bottom: 20px

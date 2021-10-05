@@ -1,7 +1,6 @@
 .contacts
   background-color: $dark
   &__wrapper
-    max-width: 1142px
     width: 100%
     display: flex
     justify-content: space-between
@@ -34,18 +33,26 @@
     display: flex
     align-items: center
     color: $light
+    transition: 0.3s
   &__phone
     color: $light
     text-decoration: none
   &__adress, &__phone
     display: flex
     align-items: center
-    margin-bottom: 39px
+    margin-bottom: 26px
+    transition: 0.3s
+  &__email:hover, &__phone:hover, &__icon-phone:hover, &__icon-mail:hover
+    color: #cefff9
+    fill: #cefff9
   &__icon-phone, &__icon-mail, &__icon-map
     fill: $primary
     margin-right: 28px
     width: 35px
     height: 35px
+    transition: 0.3s
+  &__column
+    margin-left: 30px
 .map
   width: 749px
   height: 463px
