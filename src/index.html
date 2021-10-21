@@ -92,34 +92,6 @@
     <button class="swiper-button swiper-button--prev"></button>
     <button class="swiper-button swiper-button--next"></button>
   </div>
-  <div class="modal js-modal">
-    <div class="modal__wrapper">
-      <button class="modal__close js-close-modal">
-        <svg class="modal-icon ">
-          <use href="img/sprite.svg#modal-icon" />
-        </svg></button>
-      <form action="#" class="modal__form form__form--modification js-modal-form">
-        <div class="modal__wrapper-content">
-          <h2 class="modal__title">Авторизация</h2>
-        </div>
-        <div class="form__wrapper-name form__name--modification">
-          <label class="form__label">
-            <span>Логин</span>
-            <input type="text" name="name" placeholder="Введите логин" class="form__input-name form__input js-field">
-          </label>
-        </div>
-        <div class="form__wrapper-password">
-          <label class="form__label">
-            <span>Пароль</span>
-            <input type="password" name="password" placeholder="Введите пароль"
-              class="form__input-name form__input js-field">
-          </label>
-        </div>
-        <button class="form__btn form-modal__btn btn">Отправить</button>
-      </form>
-      <!-- ====== -->
-    </div>
-  </div>
   <section class="about-us" id="about-us">
     <div class="about-us__container container">
       <div class="about-us__content">
@@ -318,6 +290,33 @@
           Bros.</a> </p>
     </div>
   </footer>
+  <div class="modal js-modal">
+    <div class="modal__wrapper">
+      <button class="modal__close js-close-modal">
+        <svg class="modal-icon ">
+          <use href="img/sprite.svg#modal-icon" />
+        </svg></button>
+      <form action="#" class="modal__form form__form--modification js-modal-form">
+        <div class="modal__wrapper-content">
+          <h2 class="modal__title">Авторизация</h2>
+        </div>
+        <div class="form__wrapper-name form__name--modification">
+          <label class="form__label">
+            <span>Логин</span>
+            <input type="text" name="name" placeholder="Введите логин" class="form__input-name form__input js-field">
+          </label>
+        </div>
+        <div class="form__wrapper-password">
+          <label class="form__label">
+            <span>Пароль</span>
+            <input type="password" name="password" placeholder="Введите пароль"
+              class="form__input-name form__input js-field">
+          </label>
+        </div>
+        <button class="form__btn form-modal__btn btn" type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
   <script src="./js/main.js"></script>
   <script src="./js/header.js"></script>
   <script src="./js/menu.js"></script>
