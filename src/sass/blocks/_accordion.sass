@@ -37,6 +37,77 @@
             margin-right: auto
         &-btn:hover
             transform: scale(1.2)
+    &__title
+        cursor: pointer
+        border: $primary solid 5px
+        font-family: Uni Neue
+        font-style: normal
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        display: flex
+        align-items: center
+        margin: 0
+        padding: 27px
+        padding-left: 31px
+        &:not(:first-child)
+            border-top: none
+        &.active
+            background-color: $dark
+            border-bottom: none
+        &.active:not(:first-child)
+            border-top: none
+        &.active .accordion-icon:before
+            transform: translate(-50%, -50%) rotate(90deg)
+    &__wrapper
+        max-width: 1140px
+        margin-top: 54px
+        margin-bottom: 57px
+        margin-left: auto
+        margin-right: auto
+        border: 1px solid $primary
+    &__content
+        display: none
+        &.active
+            display: block
+            border: #6BC9BD solid 5px
+            border-top: none
+            margin: 0
+            padding-left: 128px
+            padding-top: 17px
+            padding-bottom: 39px
+    &-icon
+        background-color: $primary
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        margin-right: 38px
+        position: relative
+        display: block
+        transition: 0.3s
+        &:hover
+            background-color: $light
+        &:after
+            content: ""
+            width: 28px
+            height: 6px
+            background-color: $dark
+            border-radius: 4px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+        &:before
+            content: ""
+            width: 6px
+            height: 28px
+            background-color: $dark
+            border-radius: 4px
+            position: absolute
+            top: 50%
+            left: 50%
+            transform: translate(-50%, -50%)
+            transition: .3s
 .main-title
     text-align: center
     font-family: Uni Neue
@@ -47,76 +118,3 @@
     text-transform: uppercase
     color: $light
     margin-top: 16px
-.accordion__title
-    cursor: pointer
-    border: $primary solid 5px
-    font-family: Uni Neue
-    font-style: normal
-    font-weight: 500
-    font-size: 30px
-    line-height: 37px
-    display: flex
-    align-items: center
-    margin: 0
-    padding: 27px
-    padding-left: 31px
-    &:not(:first-child)
-        border-top: none
-
-.accordion__title.active
-    background-color: $dark
-    border-bottom: none
-.accordion__title.active:not(:first-child)
-    border-top: none
-.accordion__wrapper
-    max-width: 1140px
-    margin-top: 54px
-    margin-bottom: 57px
-    margin-left: auto
-    margin-right: auto
-    border: 1px solid $primary
-.accordion__content
-    display: none
-.accordion__content.active
-    display: block
-    border: #6BC9BD solid 5px
-    border-top: none
-    margin: 0
-    padding-left: 128px
-    padding-top: 17px
-    padding-bottom: 39px
-.accordion-icon
-    background-color: $primary
-    width: 60px
-    height: 60px
-    border-radius: 50%
-    margin-right: 38px
-    position: relative
-    display: block
-    transition: 0.3s
-.accordion-icon:hover
-    background-color: $light
-.accordion-icon:after
-    content: ""
-    width: 28px
-    height: 6px
-    background-color: $dark
-    border-radius: 4px
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-.accordion-icon:before
-    content: ""
-    width: 6px
-    height: 28px
-    background-color: $dark
-    border-radius: 4px
-    position: absolute
-    top: 50%
-    left: 50%
-    transform: translate(-50%, -50%)
-    transition: .3s
-
-.accordion__title.active .accordion-icon:before
-    transform: translate(-50%, -50%) rotate(90deg)
