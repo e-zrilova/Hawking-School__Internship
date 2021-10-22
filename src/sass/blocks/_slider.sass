@@ -1,12 +1,11 @@
 .first-screen
   position: relative
-  padding-top: 126px
+  padding-top: 123px
   &__slider
     width: 100%
   &__slide
     position: relative
-    padding-top: 50px
-    padding-bottom: 363px
+    padding: 50px 0 363px 0
     &::after
       content: ''
       position: absolute
@@ -28,8 +27,7 @@
     font-size: 120px
     line-height: 159px
     z-index: 6
-    margin-top: 0
-    margin-bottom: 42px
+    margin: 0 0 42px 0
     padding-top: 125px
     text-transform: uppercase
   &__description
@@ -40,8 +38,7 @@
     letter-spacing: 1px
     z-index: 6
     text-transform: uppercase
-    padding-left: 56px
-    padding-right: 40px
+    padding: 0 40px 0 56px
   &__wrapper
     position: relative
     max-width: 900px
@@ -63,6 +60,7 @@
 .swiper
   &-pagination
     bottom: 140px !important
+    z-index: 9
   &-pagination-bullet
     background: $light
     border-radius: 33px
@@ -102,10 +100,7 @@
     z-index: 9
     cursor: pointer
     display: block
-    margin-right: auto
-    margin-left: auto
-    margin-bottom: 50px
-    margin-top: -101px
+    margin: -101px auto 50px auto
 @media (min-width: 1201px) and (max-width: 1483px )
   .swiper-button--prev
     margin-left: 10%
