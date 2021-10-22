@@ -90,12 +90,18 @@
       background-size: cover
       margin-right: 20%
       transition: 0.3s
+      &:hover
+        transform: scale(1.1) translateY(-50%)
     &--prev
       left: 10px
-      background-image: url(../img/arrow-prev.svg)
+      top: 57%
+      background-image: url(../img/arrow-next.svg)
+      transform: rotate(180deg)
       background-size: cover
       margin-left: 20%
       transition: 0.3s
+      &:hover
+        transform: scale(1.1) rotate(180deg)
   &-modal-btn
     z-index: 2
     cursor: pointer
