@@ -1,10 +1,10 @@
 .header
-  background-color: $primary
   position: fixed
   left: 0
   top: 0
   right: 0
   z-index: 4
+  background-color: $primary
   transition: .4s
   @media (max-width: $media-tablet)
     min-width: 768px
@@ -21,44 +21,44 @@
       display: none
     &__logo-link
       display: block
-      margin-right: 0
       width: 151px
       height: 34px
+      margin-right: 0
   &__wrapper
+    display: flex
     max-width: 1140px
+    width: 100%
     margin: auto
     padding: 35px 0
-    display: flex
     align-items: center
     justify-content: space-between
-    width: 100%
     @media (max-width: $media-tablet)
+      width: 100%
       margin: 0
       padding-left: 31px
-      width: 100%
       padding-right: 20px
       padding-bottom: 20px
     @media (max-width: $media-mobile)
+      width: 100%
       padding-left: 20px
       padding-right: 10px
       padding-top: 10px
-      width: 100%
     &-navigation
       display: flex
+      width: 100%
       margin-left: auto
       align-items: center
-      width: 100%
       justify-content: flex-end
       @media (max-width: $media-mobile)
         display: none
       &.active
-        display: block
-        background: $dark
-        width: 100%
         position: absolute
         top: 100%
         left: 0
+        display: block
+        width: 100%
         padding: 10px 0 30px 30px
+        background: $dark
   &__social
     display: flex
     margin-left: 30px
@@ -67,11 +67,11 @@
     @media (max-width: $media-mobile)
       display: block !important
       width: 100%
-      padding-top: 20px
       margin-left: 0
+      padding-top: 20px
 .social-link
-  fill: $light
   margin-right: 30px
+  fill: $light
   &:hover
     fill: $dark
   @media (max-width: $media-mobile)
@@ -91,11 +91,10 @@
       display: block
   &__list
     display: flex
-    align-items: center
-    list-style: none
-    justify-content: space-between
     padding-left: 0
     padding-right: 4px
+    align-items: center
+    justify-content: space-between
     @media (max-width: $media-tablet)
       margin-left: 0
     @media (max-width: $media-mobile)
@@ -114,11 +113,11 @@
     content: ""
     margin-left: 28px
     margin-right: 25px
+    display: inline-block
     height: 15px
     border: 1px solid $light
-    display: inline-block
-    transform: skew(330deg, 0)
     border-radius: 2px
+    transform: skew(330deg, 0)
     @media (max-width: $media-tablet)
       margin-left: 10px
       margin-right: 10px
@@ -126,15 +125,15 @@
       display: none
   &__link
     color: $light
-    text-decoration: none
-    text-transform: uppercase
     font-family: $font-secondary
     font-weight: 400
     font-size: 18px
     line-height: 22px
-    cursor: pointer
+    text-decoration: none
+    text-transform: uppercase
     border-bottom: 2px solid transparent
     transition: 0.3s
+    cursor: pointer
     &:hover
       border-bottom: 2px solid $light
       transition: 0.3s
@@ -150,17 +149,17 @@
   .hamburger
     padding: 15px 0 0 15px
     display: inline-block
-    cursor: pointer
-    transition-property: opacity, filter
-    transition-duration: 0.15s
-    transition-timing-function: linear
-    font: inherit
+    margin: 0
     color: inherit
+    font: inherit
     text-transform: none
     background-color: transparent
     border: 0
-    margin: 0
     overflow: visible
+    transition-property: opacity, filter
+    transition-duration: 0.15s
+    transition-timing-function: linear
+    cursor: pointer
   .hamburger:hover
     opacity: 0.7
   .hamburger.active:hover
@@ -170,20 +169,20 @@
   .hamburger.active .hamburger-inner::after
     background-color: $light
   .hamburger-box
+    position: relative
+    display: inline-block
     width: 40px
     height: 24px
-    display: inline-block
-    position: relative
   .hamburger-inner
-    display: block
     top: 50%
+    display: block
     margin-top: -2px
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+    position: absolute
     width: 30px
     height: 4px
     background-color: $light
     border-radius: 4px
-    position: absolute
     transition-property: transform
     transition-duration: 0.15s
     transition-timing-function: ease

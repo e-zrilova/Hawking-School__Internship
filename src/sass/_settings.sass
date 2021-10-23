@@ -5,55 +5,57 @@ body
   font-style: normal
 img
   height: auto
-ul
-  padding: 0
-  margin: 0
 a
   text-decoration: none
+ul
+  margin: 0
+  padding: 0
+  list-style: none
 button
   cursor: pointer
+input
+  outline: none
 .btn
-  color: $light
-  font-weight: 800
-  font-size: 24px
-  line-height: 48px
-  letter-spacing: 1.2px
-  text-decoration: none
   position: relative
   padding: 0 10px
+  font-size: 24px
+  line-height: 48px
+  font-weight: 800
+  letter-spacing: 1.2px
   text-transform: uppercase
-  transition: .3s
+  color: $light
   background: none
   border: none
+  transition: .3s
   @media (max-width: $media-tablet)
     padding: 0 5px
   &::after
     content: ""
     position: absolute
-    z-index: -1
     top: 50%
     left: 0
     right: 0
-    transform: translateY(-50%)
+    z-index: -1
     border: 5px solid rgba(107, 201, 189, 0.5)
+    transform: translateY(-50%)
     @media (max-width: $media-tablet)
       border: 3px solid rgba(107, 201, 189, 0.5)
   &:hover
-    transform: scale(1.25)
     padding: 0
+    transform: scale(1.25)
 .container
   max-width: 1175px
   width: 100%
-  padding: 0 20px
   margin: 0 auto
+  padding: 0 20px
   @media (max-width: $media-tablet)
     max-width: 960px
 .visually-hidden
   position: absolute
-  clip: rect(0 0 0 0)
   width: 1px
   height: 1px
   margin: -1px
+  clip: rect(0 0 0 0)
 .social-icon
   @media (max-width: $media-mobile)
     display: flex

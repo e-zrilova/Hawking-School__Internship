@@ -1,8 +1,8 @@
 .content
   &__title
-    font-weight: 800
     font-size: 24px
     line-height: 32px
+    font-weight: 800
     color: $light
 .modal
   position: fixed
@@ -10,59 +10,58 @@
   right: 0
   bottom: 0
   left: 0
-  background-color: rgba(0,0,0,.7)
-  display: none
   z-index: 4
+  display: none
+  background-color: rgba(0,0,0,.7)
   &.active
     display: flex
     align-items: center
   &__form
-    margin: 0 auto
     width: fit-content
     height: fit-content
     min-width: 100px
     min-height: 100px
-    overflow: auto
     max-height: calc(100vh - 60px)
+    margin: 0 auto
     padding: 45px 66px
-    width: 100%
-    border: 2px solid $primary
-    background-color: $dark
     color: $light
+    background-color: $dark
+    border: 2px solid $primary
+    overflow: auto
     @media (max-width: $media-tablet)
       max-width: 470px
       width: 100%
       padding: 40px
   &__title
-    text-align: center
-    font-weight: 800
     font-size: 24px
     line-height: 32px
-    text-transform: uppercase
+    font-weight: 800
     margin: 0 0 21px 0
+    text-align: center
+    text-transform: uppercase
   &__close
     position: absolute
     top: 33px
     right: 34px
-    border: none
-    background-color: transparent
-    outline: none
     width: 50px
     height: 50px
+    background-color: transparent
+    border: none
+    outline: none
     cursor: pointer
     @media (max-width: $media-tablet)
-      top: 37px
-      right: 43px
       width: 25px
       height: 25px
+      top: 37px
+      right: 43px
   &__wrapper
     position: relative
-    padding: 20px
     margin: 0 auto
+    padding: 20px
   &-icon
-    fill: $primary
     width: 30px
     height: 30px
+    fill: $primary
     pointer-events: none
     @media (max-width: $media-tablet)
       width: 25px
@@ -76,9 +75,9 @@
     width: 100%
 .form-modal__btn
   @media (max-width: $media-mobile)
+    margin-bottom: 0
     font-weight: 800
     font-size: 24px
     line-height: 48px
-    text-align: center
     letter-spacing: 1.2px
-    margin-bottom: 0
+    text-align: center

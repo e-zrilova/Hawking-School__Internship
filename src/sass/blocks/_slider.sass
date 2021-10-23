@@ -4,8 +4,8 @@
   @media (max-width: $media-tablet)
     padding-top: 100px
   @media (max-width: $media-mobile)
-    padding-top: 70px
     max-height: 520px
+    padding-top: 70px
   &__slider
     width: 100%
   &__slide
@@ -23,8 +23,8 @@
       left: 0
       bottom: 0
       right: 0
-      background: rgba(0, 0, 0, 0.6)
       z-index: 1
+      background: rgba(0, 0, 0, 0.6)
   &__img
     position: absolute
     left: 0
@@ -33,91 +33,92 @@
     z-index: 1
   &__text
     position: relative
-    font-weight: 800
-    font-size: 120px
-    line-height: 159px
     z-index: 2
     margin: 0 0 42px 0
     padding-top: 125px
+    font-weight: 800
+    font-size: 120px
+    line-height: 159px
     text-transform: uppercase
     @media (max-width: $media-tablet)
+      margin-bottom: 32px
+      padding-top: 0
       font-weight: 800
       font-size: 72px
       line-height: 95px
-      padding-top: 0
-      margin-bottom: 32px
     @media (max-width: $media-mobile)
       font-weight: 800
       font-size: 36px
       line-height: 48px
   &__description
     position: relative
+    z-index: 2
+    padding: 0 40px 0 56px
     font-weight: 700
     font-size: 20px
     line-height: 48px
     letter-spacing: 1px
-    z-index: 2
     text-transform: uppercase
-    padding: 0 40px 0 56px
     @media (max-width: $media-tablet)
+      width: 612px
+      margin-right: auto
+      margin-left: auto
+      margin-top: 0
       font-weight: 800
       font-size: 16px
       line-height: 30px
       letter-spacing: 1px
-      margin-right: auto
-      margin-left: auto
-      margin-top: 0
-      width: 612px
     @media (max-width: $media-mobile)
-      font-weight: 800
-      font-size: 12px
-      line-height: 18px
-      letter-spacing: 1px
+      max-width: 500px
       width: 100%
       padding: 0
       padding-left: 10px
       padding-right: 10px
-      max-width: 500px
+      font-weight: 800
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
   &__wrapper
     position: relative
+    z-index: 2
     max-width: 900px
+    margin: 0 auto
     color: $light
     text-align: center
-    margin: 0 auto
-    z-index: 2
     &::after
       content: ''
-      width: 461px
-      height: 461px
       position: absolute
-      border-radius: 50%
       top: 66%
       left: 51%
-      transform: translate(-50%,-50%)
-      background: rgba(107, 201, 189, 0.5)
       z-index: 1
+      width: 461px
+      height: 461px
+      background: rgba(107, 201, 189, 0.5)
+      border-radius: 50%
+      transform: translate(-50%,-50%)
+
       @media (max-width: $media-tablet)
-        width: 266px
-        height: 266px
         top: 67%
         left: 50%
+        width: 266px
+        height: 266px
       @media (max-width: $media-mobile)
+        top: 75%
         width: 199px
         height: 199px
-        top: 75%
 .swiper
   &-pagination
-    bottom: 140px !important
     z-index: 3
+    bottom: 140px !important
     @media (max-width: $media-tablet)
       bottom: 120px !important
     @media (max-width: $media-mobile)
       bottom: 15% !important
   &-pagination-bullet
-    background: $light
-    border-radius: 33px
     width: 15px
     height: 15px
+    background: $light
+    border-radius: 33px
     transition: 0.3s
     @media (max-width: $media-tablet)
       width: 10px
@@ -125,18 +126,17 @@
   &-pagination-bullet:hover
     transform: scale(1.25)
   &-button
+    position: absolute
     top: 60%
+    z-index: 2
     width: 36px
     height: 60px
     border: none
-    z-index: 2
-    position: absolute
-    transform: translateY(-50%)
-    cursor: pointer
     background-repeat: no-repeat
     background-position: center
     background-size: 10px
     background-color: transparent
+    transform: translateY(-50%)
     @media (max-width: $media-tablet)
       top: 58%
     @media (max-width: $media-mobile)
@@ -145,14 +145,14 @@
       transform: scale(1.1) translateY(-50%)
     &--next
       right: 1px
+      margin-right: 20%
       background-image: url(../img/arrow-next.svg)
       background-size: cover
-      margin-right: 20%
       transition: 0.3s
       @media (max-width: $media-tablet)
-        margin-right: 5%
         width: 14px
         height: 23px
+        margin-right: 5%
       @media (min-width: 1201px) and (max-width: 1483px )
         margin-right: 10%
       &:hover
@@ -160,40 +160,36 @@
     &--prev
       left: 10px
       top: 57%
-      background-image: url(../img/arrow-next.svg)
-      transform: rotate(180deg)
-      background-size: cover
       margin-left: 20%
+      background-image: url(../img/arrow-next.svg)
+      background-size: cover
+      transform: rotate(180deg)
       transition: 0.3s
       @media (max-width: $media-tablet)
-        margin-left: 5%
         width: 14px
         height: 23px
+        margin-left: 5%
       @media (min-width: 1201px) and (max-width: 1483px )
         margin-left: 10%
       &:hover
         transform: scale(1.1) rotate(180deg)
   &-modal-btn
     z-index: 2
-    cursor: pointer
     display: block
     margin: -101px auto 50px auto
     @media (max-width: $media-tablet)
       bottom: 42px
+      display: block
+      margin: -52px auto 2px auto
       font-weight: 800
       font-size: 18px
       line-height: 48px
       letter-spacing: 1.2px
-      cursor: pointer
-      display: block
-      margin-right: auto
-      margin-left: auto
-      margin-bottom: 2px
-      margin-top: -52px
+
     @media (max-width: $media-mobile)
       bottom: 1px
       font-weight: 800
       font-size: 14px
       line-height: 48px
-      text-align: center
       letter-spacing: 0.5px
+      text-align: center

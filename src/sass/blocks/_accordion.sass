@@ -1,18 +1,17 @@
 .accordion
-    background-color: $dark
-    color: $light
     padding: 35px 35px 85px 35px
+    color: $light
+    background-color: $dark
     border-bottom: $primary solid 5px
     @media (max-width: $media-mobile)
         padding: 20px
     &__body
         &-list
-            list-style: none
             display: inline-block
-            columns: 2
-            column-gap: 80px
             padding: 0
             margin: 0
+            columns: 2
+            column-gap: 80px
             @media (max-width: $media-tablet)
                 column-gap: 37px
             @media (max-width: $media-mobile)
@@ -27,18 +26,18 @@
             line-height: 48px
             letter-spacing: 1.2px
             @media (max-width: $media-tablet)
+                margin-bottom: 14px
                 font-weight: 500
                 font-size: 18px
                 line-height: 48px
-                text-align: center
                 letter-spacing: 1.2px
-                margin-bottom: 14px
+                text-align: center
             @media (max-width: $media-mobile)
+                margin-bottom: 0
                 font-weight: 500
                 font-size: 14px
                 line-height: 48px
                 letter-spacing: 1.2px
-                margin-bottom: 0
         &-strong
             margin-right: 20px
             text-transform: uppercase
@@ -47,11 +46,11 @@
             line-height: 48px
             letter-spacing: 1.2px
             @media (max-width: $media-tablet)
+                margin-right: 33px
                 font-weight: 800
                 font-size: 18px
                 line-height: 48px
                 letter-spacing: 1.2px
-                margin-right: 33px
             @media (max-width: $media-mobile)
                 margin-right: 15px
                 font-weight: 800
@@ -59,16 +58,16 @@
                 line-height: 48px
                 letter-spacing: 1.2px
         &-btn
-            display: flex
             z-index: 3
+            display: flex
             margin: 0 auto 0 0
             @media (max-width: $media-tablet)
+                margin-left: 4%
+                margin-bottom: 3%
                 font-weight: 800
                 font-size: 18px
                 line-height: 48px
                 letter-spacing: 1.2px
-                margin-left: 4%
-                margin-bottom: 3%
                 transform: translateY(-25%)
             @media (max-width: $media-mobile)
                 margin-left: 0
@@ -82,36 +81,36 @@
             @media (max-width: $media-mobile)
                 display: none
     &__title
-        cursor: pointer
-        border: $primary solid 5px
+        display: flex
+        margin: 0
+        padding: 27px 27px 27px 31px
         font-weight: 500
         font-size: 30px
         line-height: 37px
-        display: flex
         align-items: center
-        margin: 0
-        padding: 27px 27px 27px 31px
+        border: $primary solid 5px
+        cursor: pointer
         @media (max-width: $media-tablet)
+            padding-left: 22px
             font-weight: 500
             font-size: 24px
             line-height: 29px
-            padding-left: 22px
             border: $primary solid 2px
         @media (max-width: $media-mobile)
+            padding-top: 18px
+            padding-bottom: 18px
             font-weight: 500
             font-size: 16px
             line-height: 20px
             border: $primary solid 1px
-            padding-top: 18px
-            padding-bottom: 18px
             &::before
+                width: 26px
+                height: 27px
                 padding-right: 30px
-                width: 26px
-                height: 27px
             &.active::before
-                padding-right: 39px
                 width: 26px
                 height: 27px
+                padding-right: 39px
         &:not(:first-child)
             border-top: none
         &.active
@@ -125,10 +124,10 @@
         display: none
         &.active
             display: block
-            border: $primary solid 5px
-            border-top: none
             margin: 0
             padding: 17px 0 39px 128px
+            border: $primary solid 5px
+            border-top: none
             @media (max-width: $media-tablet)
                 margin: 0
                 padding-left: 88px
@@ -140,13 +139,13 @@
                 border: $primary solid 1px
                 border-top: none
     &-icon
-        background-color: $primary
+        position: relative
+        display: block
         width: 60px
         height: 60px
         border-radius: 50%
         margin-right: 38px
-        position: relative
-        display: block
+        background-color: $primary
         transition: 0.3s
         @media (max-width: $media-tablet)
             width: 27px
@@ -155,44 +154,44 @@
             background-color: $light
         &:after
             content: ""
+            position: absolute
+            top: 50%
+            left: 50%
             width: 28px
             height: 6px
             background-color: $dark
             border-radius: 4px
-            position: absolute
-            top: 50%
-            left: 50%
             transform: translate(-50%, -50%)
             @media (max-width: $media-tablet)
                 width: 13px
                 height: 3px
         &:before
             content: ""
+            position: absolute
+            top: 50%
+            left: 50%
             width: 6px
             height: 28px
             background-color: $dark
             border-radius: 4px
-            position: absolute
-            top: 50%
-            left: 50%
             transform: translate(-50%, -50%)
             transition: .3s
             @media (max-width: $media-tablet)
                 width: 3px
                 height: 13px
 .main-title
+    margin-top: 16px
     text-align: center
     font-weight: 800
     font-size: 60px
     line-height: 79px
     text-transform: uppercase
     color: $light
-    margin-top: 16px
     @media (max-width: $media-tablet)
+        margin-top: 0
         font-weight: 800
         font-size: 36px
         line-height: 48px
-        margin-top: 0
     @media (max-width: $media-mobile)
         font-weight: 800
         font-size: 24px

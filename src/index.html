@@ -25,12 +25,12 @@
           </ul>
         </nav>
         <nav class="header__social">
-          <a href="https://www.facebook.com/" target="_blank" class="social-link">
+          <a class="social-link" href="https://www.facebook.com/" target="_blank">
             <svg class="social-fb">
               <use href="img/sprite.svg#facebook" />
             </svg>
           </a>
-          <a href="https://vk.com/" target="_blank" class="social-link">
+          <a class="social-link" href="https://vk.com/" target="_blank">
             <svg class="social-vk">
               <use href="img/sprite.svg#vk" />
             </svg>
@@ -105,9 +105,8 @@
             создание
             системы обучения кадров, соответствует.</p>
         </div>
-        <img src="img/h@3x.png"
-          alt="image: Декоративное изображение в виде двух букв C и Н, которые являются сокращенной аббревиатурой названия компании Concert Home"
-          class="about-us__img">
+        <img class="about-us__img" src="img/h@3x.png"
+          alt="image: Декоративное изображение в виде двух букв C и Н, которые являются сокращенной аббревиатурой названия компании Concert Home">
       </div>
     </section>
     <section class="accordion" id="accordion">
@@ -255,23 +254,23 @@
           <div class="form__wrapper-radiobutton">
             <p class="form__radiobutton-title">Пол:</p>
             <label class="form__radiobutton-label custom-label">
-              <input id="radio-2" type="radio" name="gender" value="2"
-                class="form__radiobutton custom-radiobutton visually-hidden js-field">
+              <input class="form__radiobutton custom-radiobutton visually-hidden js-field" id="radio-2" type="radio"
+                name="gender" value="2">
               <span class="form-radiobutton"> Мужской </span>
             </label>
             <label class="form__radiobutton-label">
-              <input id="radio-1" type="radio" name="gender" value="1" checked
-                class="form__radiobutton custom-radiobutton visually-hidden js-field">
+              <input class="form__radiobutton custom-radiobutton visually-hidden js-field" id="radio-1" type="radio"
+                name="gender" value="1" checked>
               <span class="form-radiobutton"> Женский </span>
             </label>
           </div>
           <div class="form__wrapper-textarea">
             <p class="form__textarea-label">Комментарий:</p>
-            <textarea name="comment" placeholder="Введите комментарий..." class="form__textarea js-field"></textarea>
+            <textarea class="form__textarea js-field" name="comment" placeholder="Введите комментарий..."></textarea>
           </div>
           <div class="form__wrapper-check">
             <label>
-              <input type="checkbox" class="custom-checkbox visually-hidden js-field" id="chk1" name="agree"
+              <input class="custom-checkbox visually-hidden js-field" type="checkbox" id="chk1" name="agree"
                 required="required">
               <span class="form-span"> Я даю согласие на обработку персональных данных</span>
             </label>
@@ -288,10 +287,10 @@
             <p class="contacts__adress"><svg class="contacts__icon-map">
                 <use href="img/sprite.svg#map" />
               </svg>ул. Арбат, 1а, Москва 119019, Россия</p>
-            <a href="tel:+74950000000" class="contacts__phone"><svg class="contacts__icon-phone">
+            <a class="contacts__phone" href="tel:+74950000000"><svg class="contacts__icon-phone">
                 <use href="img/sprite.svg#phone" />
               </svg>+7 (495) 000-00-00</a>
-            <a href="mailto:info@mysite.ru" class=" contacts__email"><svg class="contacts__icon-mail">
+            <a class=" contacts__email" href="mailto:info@mysite.ru"><svg class="contacts__icon-mail">
                 <use href="img/sprite.svg#mail" />
               </svg>info@mysite.ru</a>
           </div>
@@ -320,7 +319,7 @@
         </a>
       </nav>
       <p class="footer__copyright">© 2019 Concert Home. Сайт создан в
-        <a target="blank" href="https://hawkingbros.com/" class="footer__company-link">Hawking Bros.</a>
+        <a class="footer__company-link" target="blank" href="https://hawkingbros.com/">Hawking Bros.</a>
       </p>
     </div>
   </footer>
@@ -338,14 +337,14 @@
         <div class="form__wrapper-name form__name--modification">
           <label class="form__label">
             <span>Логин</span>
-            <input type="text" name="name" placeholder="Введите логин" class="form__input-name form__input js-field">
+            <input class="form__input-name form__input js-field" type="text" name="name" placeholder="Введите логин">
           </label>
         </div>
         <div class="form__wrapper-password">
           <label class="form__label">
             <span>Пароль</span>
-            <input type="password" name="password" placeholder="Введите пароль"
-              class="form__input-name form__input js-field">
+            <input class="form__input-name form__input js-field" type="password" name="password"
+              placeholder="Введите пароль">
           </label>
         </div>
         <button class="form__btn form-modal__btn btn" type="submit">Отправить</button>
