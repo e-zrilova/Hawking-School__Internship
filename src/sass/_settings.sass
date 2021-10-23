@@ -25,6 +25,8 @@ button
   transition: .3s
   background: none
   border: none
+  @media (max-width: $media-tablet)
+    padding: 0 5px
   &::after
     content: ""
     position: absolute
@@ -34,6 +36,8 @@ button
     right: 0
     transform: translateY(-50%)
     border: 5px solid rgba(107, 201, 189, 0.5)
+    @media (max-width: $media-tablet)
+      border: 3px solid rgba(107, 201, 189, 0.5)
   &:hover
     transform: scale(1.25)
     padding: 0
@@ -42,6 +46,8 @@ button
   width: 100%
   padding: 0 20px
   margin: 0 auto
+  @media (max-width: $media-tablet)
+    max-width: 960px
 .form__form--modification
   padding: 45px 66px
   width: 100%
@@ -54,8 +60,8 @@ button
   width: 1px
   height: 1px
   margin: -1px
-@media (max-width: 1200px)
-  .btn
-    padding: 0 5px
-    &::after
-      border: 3px solid rgba(107, 201, 189, 0.5)
+.social-icon
+  @media (max-width: $media-mobile)
+    display: flex
+    align-items: center
+    padding-left: 4px

@@ -33,7 +33,7 @@ const styles = () => src('./src/sass/style.sass')
   .pipe(sass({
     includePaths: ['node_modules']
   }))
-  .pipe(gp.groupCssMediaQueries())
+  .pipe(gp.if(!isProd, gp.sourcemaps.write()))
   .pipe(gp.if(isProd, gp.autoprefixer()))
   .pipe(gp.if(isProd, gp.cleanCss({
     level: {
@@ -43,7 +43,7 @@ const styles = () => src('./src/sass/style.sass')
         removeWhitespace: true
       },
       2: {
-        mergeMedia: true,
+        mergeMedia: false,
         removeEmpty: true,
         removeDuplicateFontRules: true,
         removeDuplicateMediaBlocks: true,
@@ -52,7 +52,6 @@ const styles = () => src('./src/sass/style.sass')
       }
     }
   })))
-  .pipe(gp.if(!isProd, gp.sourcemaps.write("./maps/")))
   .pipe(dest('./dist/css'))
   .pipe(browserSync.stream())
 
@@ -77,7 +76,7 @@ const watchFiles = () => {
   watch('./src/js/**/*', jsBuild);
   watch('./src/index.html', html);
 }
-  
+
 const build = parallel(html, fonst, img, jsBuild, styles);
 const dev = parallel(build, watchFiles, browser)
 

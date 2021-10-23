@@ -3,11 +3,17 @@
   flex-direction: column
   align-items: center
   padding: 42px 0 55px 0
-  background-image: url(../img/form-img.jpg)
-  background-repeat: no-repeat
-  background-size: cover
-
-  // background: $primary url(../img/form-img.jpg) no-repeat cover
+  background: $primary url(../img/form-img.jpg) center center/cover no-repeat
+  @media (max-width: $media-tablet)
+    padding-top: 20px
+    padding-bottom: 74px
+    border-bottom: 5px solid $primary
+  @media (max-width: $media-mobile)
+    padding-bottom: 0
+  @media (min-width: 516px) and (max-width: $media-mobile)
+    padding-bottom: 20px
+  @media (max-width: 516px)
+    background: $primary
   &__wrapper
     margin-bottom: 37px
   &__title
@@ -17,16 +23,37 @@
     color: $light
     margin: 0 0 30 0
     text-transform: uppercase
+    @media (max-width: $media-tablet)
+      font-weight: 800
+      font-size: 30px
+      line-height: 40px
+      margin-bottom: 18px
+    @media (max-width: $media-mobile)
+      font-weight: 800
+      font-size: 24px
+      line-height: 32px
   &__form
     max-width: 550px
     width: 100%
     border: 2px solid $primary
     background-color: $dark
     color: $light
+    @media (max-width: $media-tablet)
+      max-width: 514px
+    @media (max-width: 516px)
+      border-left: none
+      border-right: none
   &__btn
     display: block
     z-index: 3
     margin: 0 auto
+    @media (max-width: $media-mobile)
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 1.2px
+      margin-bottom: 0
   &__label
     font-weight: 500
     font-size: 18px
@@ -36,7 +63,7 @@
     border: 1px solid $light
     background: none
     width: 100%
-    padding: 9px 0 0 22px
+    padding: 9px 0 9px 22px
     font-weight: 500
     font-size: 18px
     line-height: 22px
@@ -44,6 +71,13 @@
     margin: 18px 0 16px 0
     color: $light
     outline: none
+    @media (max-width: $media-tablet)
+      margin-top: 15px
+    @media (max-width: $media-mobile)
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
   &__wrapper-select
     width: 100%
     padding: 9px 0
@@ -54,6 +88,8 @@
     letter-spacing: 0.05px
     margin-bottom: 16px
     color: $light
+    @media (max-width: $media-tablet)
+      padding: 0
   &__textarea
     width: 100%
     padding: 9px 0 0 22px
@@ -68,10 +104,30 @@
     resize: none
     height: 98px
     outline: none
+    @media (max-width: $media-mobile)
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
+    &-label
+      @media (max-width: $media-mobile)
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+        letter-spacing: 0.05px
+  &__label, &__select-label
+    @media (max-width: $media-mobile)
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
   &__wrapper-radiobutton
     margin-bottom: 20px
   &__radiobutton-label
     cursor: pointer
+  &__radiobutton-title
+    @media (max-width: $media-tablet)
+      margin-bottom: 22px
 .form-span
   position: relative
   padding-left: 45px
@@ -111,6 +167,8 @@
   font-size: 14px
   line-height: 17px
   letter-spacing: 0.05px
+  @media (max-width: $media-mobile)
+    padding-left: 37px
   &:before
     content: ""
     position: absolute
@@ -143,6 +201,8 @@
   display: block
 .custom-label
   margin-right: 38px
+  @media (max-width: $media-mobile)
+    margin-right: 10px
 .custom-checkbox.error-input + .form-span:before
   border: 1px solid $lightcoral
 .form__wrapper-textarea
@@ -153,8 +213,13 @@
   background-color: transparent
   border: 1px solid $light
   padding: 6.5px 17.5px 3.75px
+  @media (max-width: $media-tablet)
+    padding-left: 9px
 .choices__list
   background-color: $dark
+.choices__list--single
+  @media (max-width: $media-tablet)
+    padding-left: 0
 .choices[data-type*=select-one]:after
   background: url(../img/arrow-next.svg) center center/cover no-repeat
   content: ''
@@ -179,6 +244,16 @@
   font-size: 18px
   line-height: 22px
   letter-spacing: 0.05px
+  @media (max-width: $media-tablet)
+    font-weight: 500
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.05px
+  @media (max-width: $media-mobile)
+    font-weight: 500
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
 .form__input:focus
   box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
 .error-text

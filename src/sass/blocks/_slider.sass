@@ -1,11 +1,21 @@
 .first-screen
   position: relative
   padding-top: 123px
+  @media (max-width: $media-tablet)
+    padding-top: 100px
+  @media (max-width: $media-mobile)
+    padding-top: 70px
+    max-height: 520px
   &__slider
     width: 100%
   &__slide
     position: relative
     padding: 50px 0 363px 0
+    @media (max-width: $media-tablet)
+      padding-top: 37px
+      padding-bottom: 154px
+    @media (max-width: $media-mobile)
+      padding-bottom: 100px
     &::after
       content: ''
       position: absolute
@@ -30,6 +40,16 @@
     margin: 0 0 42px 0
     padding-top: 125px
     text-transform: uppercase
+    @media (max-width: $media-tablet)
+      font-weight: 800
+      font-size: 72px
+      line-height: 95px
+      padding-top: 0
+      margin-bottom: 32px
+    @media (max-width: $media-mobile)
+      font-weight: 800
+      font-size: 36px
+      line-height: 48px
   &__description
     position: relative
     font-weight: 700
@@ -39,6 +59,25 @@
     z-index: 2
     text-transform: uppercase
     padding: 0 40px 0 56px
+    @media (max-width: $media-tablet)
+      font-weight: 800
+      font-size: 16px
+      line-height: 30px
+      letter-spacing: 1px
+      margin-right: auto
+      margin-left: auto
+      margin-top: 0
+      width: 612px
+    @media (max-width: $media-mobile)
+      font-weight: 800
+      font-size: 12px
+      line-height: 18px
+      letter-spacing: 1px
+      width: 100%
+      padding: 0
+      padding-left: 10px
+      padding-right: 10px
+      max-width: 500px
   &__wrapper
     position: relative
     max-width: 900px
@@ -57,16 +96,32 @@
       transform: translate(-50%,-50%)
       background: rgba(107, 201, 189, 0.5)
       z-index: 1
+      @media (max-width: $media-tablet)
+        width: 266px
+        height: 266px
+        top: 67%
+        left: 50%
+      @media (max-width: $media-mobile)
+        width: 199px
+        height: 199px
+        top: 75%
 .swiper
   &-pagination
     bottom: 140px !important
     z-index: 3
+    @media (max-width: $media-tablet)
+      bottom: 120px !important
+    @media (max-width: $media-mobile)
+      bottom: 15% !important
   &-pagination-bullet
     background: $light
     border-radius: 33px
     width: 15px
     height: 15px
     transition: 0.3s
+    @media (max-width: $media-tablet)
+      width: 10px
+      height: 10px
   &-pagination-bullet:hover
     transform: scale(1.25)
   &-button
@@ -82,6 +137,10 @@
     background-position: center
     background-size: 10px
     background-color: transparent
+    @media (max-width: $media-tablet)
+      top: 58%
+    @media (max-width: $media-mobile)
+      display: none
     &:hover
       transform: scale(1.1) translateY(-50%)
     &--next
@@ -90,6 +149,12 @@
       background-size: cover
       margin-right: 20%
       transition: 0.3s
+      @media (max-width: $media-tablet)
+        margin-right: 5%
+        width: 14px
+        height: 23px
+      @media (min-width: 1201px) and (max-width: 1483px )
+        margin-right: 10%
       &:hover
         transform: scale(1.1) translateY(-50%)
     &--prev
@@ -100,6 +165,12 @@
       background-size: cover
       margin-left: 20%
       transition: 0.3s
+      @media (max-width: $media-tablet)
+        margin-left: 5%
+        width: 14px
+        height: 23px
+      @media (min-width: 1201px) and (max-width: 1483px )
+        margin-left: 10%
       &:hover
         transform: scale(1.1) rotate(180deg)
   &-modal-btn
@@ -107,8 +178,23 @@
     cursor: pointer
     display: block
     margin: -101px auto 50px auto
-@media (min-width: 1201px) and (max-width: 1483px )
-  .swiper-button--prev
-    margin-left: 10%
-    .swiper-button--next
-      margin-right: 10%
+    @media (max-width: $media-tablet)
+      bottom: 42px
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      letter-spacing: 1.2px
+      z-index: 9
+      cursor: pointer
+      display: block
+      margin-right: auto
+      margin-left: auto
+      margin-bottom: 2px
+      margin-top: -52px
+    @media (max-width: $media-mobile)
+      bottom: 1px
+      font-weight: 800
+      font-size: 14px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 0.5px

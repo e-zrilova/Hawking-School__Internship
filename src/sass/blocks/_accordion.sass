@@ -3,6 +3,8 @@
     color: $light
     padding: 35px 35px 85px 35px
     border-bottom: $primary solid 5px
+    @media (max-width: $media-mobile)
+        padding: 20px
     &__body
         &-list
             list-style: none
@@ -11,6 +13,12 @@
             column-gap: 80px
             padding: 0
             margin: 0
+            @media (max-width: $media-tablet)
+                column-gap: 37px
+            @media (max-width: $media-mobile)
+                display: flex
+                flex-direction: column
+                align-items: flex-start
         &-item
             max-width: 320px
             margin-bottom: 30px
@@ -18,6 +26,19 @@
             font-size: 30px
             line-height: 48px
             letter-spacing: 1.2px
+            @media (max-width: $media-tablet)
+                font-weight: 500
+                font-size: 18px
+                line-height: 48px
+                text-align: center
+                letter-spacing: 1.2px
+                margin-bottom: 14px
+            @media (max-width: $media-mobile)
+                font-weight: 500
+                font-size: 14px
+                line-height: 48px
+                letter-spacing: 1.2px
+                margin-bottom: 0
         &-strong
             margin-right: 20px
             text-transform: uppercase
@@ -25,12 +46,41 @@
             font-size: 24px
             line-height: 48px
             letter-spacing: 1.2px
+            @media (max-width: $media-tablet)
+                font-weight: 800
+                font-size: 18px
+                line-height: 48px
+                letter-spacing: 1.2px
+                margin-right: 33px
+            @media (max-width: $media-mobile)
+                margin-right: 15px
+                font-weight: 800
+                font-size: 14px
+                line-height: 48px
+                letter-spacing: 1.2px
         &-btn
             display: flex
             z-index: 3
             margin: 0 auto 0 0
-        &-btn:hover
-            transform: scale(1.2)
+            @media (max-width: $media-tablet)
+                font-weight: 800
+                font-size: 18px
+                line-height: 48px
+                letter-spacing: 1.2px
+                margin-left: 4%
+                margin-bottom: 3%
+                transform: translateY(-25%)
+            @media (max-width: $media-mobile)
+                margin-left: 0
+                font-weight: 800
+                font-size: 14px
+                line-height: 48px
+                letter-spacing: 0.5px
+            &:hover
+                transform: scale(1.2)
+        &-mobile
+            @media (max-width: $media-mobile)
+                display: none
     &__title
         cursor: pointer
         border: $primary solid 5px
@@ -41,6 +91,27 @@
         align-items: center
         margin: 0
         padding: 27px 27px 27px 31px
+        @media (max-width: $media-tablet)
+            font-weight: 500
+            font-size: 24px
+            line-height: 29px
+            padding-left: 22px
+            border: $primary solid 2px
+        @media (max-width: $media-mobile)
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            border: $primary solid 1px
+            padding-top: 18px
+            padding-bottom: 18px
+            &::before
+                padding-right: 30px
+                width: 26px
+                height: 27px
+            &.active::before
+                padding-right: 39px
+                width: 26px
+                height: 27px
         &:not(:first-child)
             border-top: none
         &.active
@@ -58,6 +129,16 @@
             border-top: none
             margin: 0
             padding: 17px 0 39px 128px
+            @media (max-width: $media-tablet)
+                margin: 0
+                padding-left: 88px
+                padding-top: 9px
+                padding-bottom: 9px
+                border: $primary solid 2px
+            @media (max-width: $media-mobile)
+                padding-left: 22%
+                border: $primary solid 1px
+                border-top: none
     &-icon
         background-color: $primary
         width: 60px
@@ -67,6 +148,9 @@
         position: relative
         display: block
         transition: 0.3s
+        @media (max-width: $media-tablet)
+            width: 27px
+            height: 27px
         &:hover
             background-color: $light
         &:after
@@ -79,6 +163,9 @@
             top: 50%
             left: 50%
             transform: translate(-50%, -50%)
+            @media (max-width: $media-tablet)
+                width: 13px
+                height: 3px
         &:before
             content: ""
             width: 6px
@@ -90,6 +177,9 @@
             left: 50%
             transform: translate(-50%, -50%)
             transition: .3s
+            @media (max-width: $media-tablet)
+                width: 3px
+                height: 13px
 .main-title
     text-align: center
     font-weight: 800
@@ -98,3 +188,12 @@
     text-transform: uppercase
     color: $light
     margin-top: 16px
+    @media (max-width: $media-tablet)
+        font-weight: 800
+        font-size: 36px
+        line-height: 48px
+        margin-top: 0
+    @media (max-width: $media-mobile)
+        font-weight: 800
+        font-size: 24px
+        line-height: 32px
