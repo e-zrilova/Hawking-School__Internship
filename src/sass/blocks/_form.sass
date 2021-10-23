@@ -1,19 +1,33 @@
 .form
+  max-width: 1920px
+  width: 100%
+  background: $primary url(../img/form-img.jpg) center center/cover no-repeat
+  padding: 42px 0 55px 0
   display: flex
   flex-direction: column
   align-items: center
-  padding: 42px 0 55px 0
-  background: $primary url(../img/form-img.jpg) center center/cover no-repeat
-  @media (max-width: $media-tablet)
-    padding-top: 20px
-    padding-bottom: 74px
-    border-bottom: 5px solid $primary
   @media (max-width: $media-mobile)
     padding-bottom: 0
+    padding-top: 0
   @media (min-width: 516px) and (max-width: $media-mobile)
     padding-bottom: 20px
   @media (max-width: 516px)
     background: $primary
+  &__primary
+    padding: 45px 66px
+    max-width: 550px
+    width: 100%
+    border: 2px solid $primary
+    background-color: $dark
+    color: $light
+  @media (max-width: $media-tablet)
+    max-width: 514px
+    padding-top: 20px
+    padding-bottom: 74px
+    border-bottom: 5px solid $primary
+  @media (max-width: 516px)
+    border-left: none
+    border-right: none
   &__wrapper
     margin-bottom: 37px
   &__title
@@ -32,17 +46,6 @@
       font-weight: 800
       font-size: 24px
       line-height: 32px
-  &__form
-    max-width: 550px
-    width: 100%
-    border: 2px solid $primary
-    background-color: $dark
-    color: $light
-    @media (max-width: $media-tablet)
-      max-width: 514px
-    @media (max-width: 516px)
-      border-left: none
-      border-right: none
   &__btn
     display: block
     z-index: 3

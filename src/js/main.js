@@ -1,16 +1,20 @@
 import Inputmask from "inputmask";
 import Choices from 'choices.js';
 import Swiper, {
-  Navigation, 
+  Navigation,
   Pagination,
   Keyboard
 } from 'swiper';
-import { createForm } from './modules/form';
-import {initModal} from './modules/modal';
+import {
+  createForm
+} from './modules/form';
+import {
+  initModal
+} from './modules/modal';
 
- let inputs = document.querySelectorAll('input[type="tel"]')
- let im = new Inputmask('+7 (999) 999-99-99')
- im.mask(inputs)
+let inputs = document.querySelectorAll('input[type="tel"]')
+let im = new Inputmask('+7 (999) 999-99-99')
+im.mask(inputs)
 
 Swiper.use([Navigation, Pagination, Keyboard]);
 
@@ -45,7 +49,7 @@ defaultSelect();
 
 const closeModal = initModal()
 
-const form = document.querySelector('.js-form-form')
+const form = document.querySelector('.js-form')
 createForm(form);
 const modalForm = document.querySelector('.js-modal-form');
 createForm(modalForm, closeModal);
