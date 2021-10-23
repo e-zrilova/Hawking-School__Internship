@@ -1,5 +1,5 @@
  export const initModal = () => {
-   const modal = document.querySelector('.js-modal')
+   const modal = document.querySelector('.modal')
    const openBtn = document.querySelector('.js-open-modal')
    const closeBtn = document.querySelector('.js-close-modal')
 
