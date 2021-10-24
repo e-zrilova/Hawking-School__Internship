@@ -27,8 +27,6 @@
     position: relative
     z-index: 2
     display: flex
-    @media (max-width: $media-tablet)
-      display: flex
     @media (max-width: $media-mobile)
       width: 708px
   &__title
@@ -38,12 +36,10 @@
     line-height: 64px
     text-transform: uppercase
     @media (max-width: $media-tablet)
-      font-weight: 800
       font-size: 30px
       line-height: 40px
     @media (max-width: $media-mobile)
       margin-bottom: 20px
-      font-weight: 800
       font-size: 24px
       line-height: 32px
   &__text
@@ -56,12 +52,10 @@
     @media (max-width: $media-tablet)
       margin-right: 13px
       margin-top: 0
-      font-weight: 700
       font-size: 18px
       line-height: 30px
     @media (max-width: $media-mobile)
       margin-right: 0
-      font-weight: 700
       font-size: 12px
       line-height: 18px
   &__img
