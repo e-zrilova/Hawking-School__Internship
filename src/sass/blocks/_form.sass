@@ -1,0 +1,275 @@
+.form
+  padding: 42px 0 55px 0
+  display: flex
+  max-width: 1920px
+  width: 100%
+  align-items: center
+  background: $primary url(../img/form-img.jpg) center center/cover no-repeat
+  flex-direction: column
+  @media (max-width: $media-mobile)
+    padding-bottom: 0
+    padding-top: 0
+  @media (min-width: 516px) and (max-width: $media-mobile)
+    padding-bottom: 20px
+  @media (max-width: 516px)
+    background: $primary
+  &__primary
+    padding: 45px 66px
+    max-width: 550px
+    width: 100%
+    border: 2px solid $primary
+    background-color: $dark
+    color: $light
+  @media (max-width: $media-tablet)
+    max-width: 514px
+    padding-top: 20px
+    padding-bottom: 74px
+    border-bottom-width: 5px
+  @media (max-width: 516px)
+    border-left: none
+    border-right: none
+  &__wrapper
+    margin-bottom: 37px
+  &__title
+    margin: 0 0 30 0
+    font-weight: 800
+    font-size: 60px
+    line-height: 79px
+    color: $light
+    text-transform: uppercase
+    @media (max-width: $media-tablet)
+      margin-bottom: 18px
+      font-size: 30px
+      line-height: 40px
+    @media (max-width: $media-mobile)
+      font-size: 24px
+      line-height: 32px
+  &__btn
+    z-index: 3
+    margin: 0 auto
+    display: block
+    @media (max-width: $media-mobile)
+      margin-bottom: 0
+      font-weight: 800
+      font-size: 18px
+      line-height: 48px
+      text-align: center
+      letter-spacing: 1.2px
+  &__label
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.05px
+  &__input-name, &__input-tel, &__input-email
+    width: 100%
+    margin: 18px 0 16px 0
+    padding: 9px 0 9px 22px
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.05px
+    color: $light
+    border: 1px solid $light
+    background: none
+    @media (max-width: $media-tablet)
+      margin-top: 15px
+    @media (max-width: $media-mobile)
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
+  &__wrapper-select
+    margin-bottom: 16px
+    padding: 9px 0
+    width: 100%
+    background: none
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.05px
+    color: $light
+    @media (max-width: $media-tablet)
+      padding: 0
+  &__textarea
+    margin-bottom: 4px
+    padding: 9px 0 0 22px
+    width: 100%
+    height: 98px
+    resize: none
+    font-weight: 500
+    font-size: 18px
+    line-height: 22px
+    letter-spacing: 0.05px
+    border: 1px solid $light
+    background: none
+    color: $light
+    outline: none
+    @media (max-width: $media-mobile)
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
+    &-label
+      @media (max-width: $media-mobile)
+        font-weight: 500
+        font-size: 14px
+        line-height: 17px
+  &__label, &__select-label
+    @media (max-width: $media-mobile)
+      font-weight: 500
+      font-size: 14px
+      line-height: 17px
+      letter-spacing: 0.05px
+  &__wrapper-radiobutton
+    margin-bottom: 20px
+  &__radiobutton-label
+    cursor: pointer
+  &__radiobutton-title
+    @media (max-width: $media-tablet)
+      margin-bottom: 22px
+.form-span
+  position: relative
+  display: block
+  margin-bottom: 30px
+  padding-left: 45px
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  letter-spacing: 0.05px
+  cursor: pointer
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 25px
+    height: 25px
+    margin: auto
+    border: 2px solid $primary
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 8px
+    display: none
+    width: 23px
+    margin: auto
+    background: url(../../img/check.svg) center center no-repeat
+.visually-hidden:checked+.form-span:after
+  display: block
+.form-radiobutton
+  position: relative
+  padding-left: 45px
+  font-weight: 500
+  font-size: 14px
+  line-height: 17px
+  letter-spacing: 0.05px
+  @media (max-width: $media-mobile)
+    padding-left: 37px
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    width: 25px
+    height: 25px
+    margin: auto
+    border: 2px solid $primary
+    border-radius: 85px
+  &:after
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 11px
+    display: none
+    width: 7px
+    height: 7px
+    margin: auto
+    background-color: $light
+    border-radius: 50%
+.form__radiobutton-title, .form__textarea-label
+  font-weight: 500
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.05px
+.visually-hidden:checked+.form-radiobutton:after
+  display: block
+.custom-label
+  margin-right: 38px
+  @media (max-width: $media-mobile)
+    margin-right: 10px
+.custom-checkbox.error-input + .form-span:before
+  border: 1px solid $lightcoral
+.form__wrapper-textarea
+  margin: 20px 0
+.choices
+  margin-top: 10px
+.choices__inner
+  padding: 6.5px 17.5px 3.75px
+  background-color: transparent
+  border: 1px solid $light
+  @media (max-width: $media-tablet)
+    padding-left: 9px
+.choices__list
+  background-color: $dark
+.choices__list--single
+  @media (max-width: $media-tablet)
+    padding-left: 0
+.choices[data-type*=select-one]:after
+  content: ''
+  position: absolute
+  right: 25.5px
+  top: 10px
+  height: 23px
+  width: 12px
+  margin-top: 0
+  background: url(../img/arrow-next.svg) center center/cover no-repeat
+  border-style: none
+  border-color: transparent transparent
+  border-width: 0
+  transform: rotate(90deg)
+  pointer-events: none
+.choices__list--dropdown .choices__item--selectable.is-highlighted
+  background-color: $dark
+.choices.is-focused.is-open:after
+  top: 17px
+.choices__list--single .choices__item
+  width: 100%
+  font-weight: 500
+  font-size: 18px
+  line-height: 22px
+  letter-spacing: 0.05px
+  @media (max-width: $media-tablet)
+    font-size: 16px
+    line-height: 20px
+    letter-spacing: 0.05px
+  @media (max-width: $media-mobile)
+    font-size: 14px
+    line-height: 17px
+    letter-spacing: 0.05px
+.form__input:focus
+  box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
+.error-text
+  margin-bottom: 10px
+  font-weight: 500
+  font-size: 16px
+  line-height: 17px
+  letter-spacing: 0.05px
+  color: $lightcoral
+.form__input.error-input, .form__textarea.error-input
+  border: 1px solid $lightcoral
+.form-span
+  transition: 0.3s
+.form-span:hover
+  color: $primary-light
+  &::before
+    box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
+.form-radiobutton:hover
+  color: $primary-light
+.form-radiobutton:hover
+  &::before
+    box-shadow: 1px 1px 3px $primary, -1px -1px 3px $primary
+.form__textarea.js-field.error-input
+  margin-bottom: 10px

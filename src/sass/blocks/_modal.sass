@@ -1,0 +1,83 @@
+.content
+  &__title
+    font-size: 24px
+    line-height: 32px
+    font-weight: 800
+    color: $light
+.modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 4
+  display: none
+  background-color: rgba(0,0,0,.7)
+  &.active
+    display: flex
+    align-items: center
+  &__form
+    width: fit-content
+    height: fit-content
+    min-width: 100px
+    min-height: 100px
+    max-height: calc(100vh - 60px)
+    margin: 0 auto
+    padding: 45px 66px
+    color: $light
+    background-color: $dark
+    border: 2px solid $primary
+    overflow: auto
+    @media (max-width: $media-tablet)
+      max-width: 470px
+      width: 100%
+      padding: 40px
+  &__title
+    font-size: 24px
+    line-height: 32px
+    font-weight: 800
+    margin: 0 0 21px 0
+    text-align: center
+    text-transform: uppercase
+  &__close
+    position: absolute
+    top: 33px
+    right: 34px
+    width: 50px
+    height: 50px
+    background-color: transparent
+    border: none
+    outline: none
+    cursor: pointer
+    @media (max-width: $media-tablet)
+      width: 25px
+      height: 25px
+      top: 37px
+      right: 43px
+  &__wrapper
+    position: relative
+    margin: 0 auto
+    padding: 20px
+  &-icon
+    width: 30px
+    height: 30px
+    fill: $primary
+    pointer-events: none
+    @media (max-width: $media-tablet)
+      width: 25px
+      height: 25px
+.form__wrapper-password
+  margin-bottom: 20px
+.form__wrapper-password, .form__name--modification
+  width: 418px
+  @media (max-width: $media-tablet)
+    max-width: 440px
+    width: 100%
+.form-modal__btn
+  @media (max-width: $media-mobile)
+    margin-bottom: 0
+    font-weight: 800
+    font-size: 24px
+    line-height: 48px
+    letter-spacing: 1.2px
+    text-align: center

@@ -1,0 +1,113 @@
+.contacts
+  background-color: $dark
+  @media (max-width: $media-mobile)
+    display: flex
+    align-items: center
+  &__wrapper
+    max-width: 1142px
+    width: 100%
+    display: flex
+    margin: auto
+    align-items: center
+    justify-content: space-between
+    @media (max-width: $media-mobile)
+      flex-direction: column-reverse
+  &__title
+    margin: 62px auto 31px auto
+    font-weight: 800
+    font-size: 48px
+    line-height: 64px
+    color: $light
+    text-transform: uppercase
+    @media (max-width: $media-tablet)
+      margin-bottom: 23px
+      font-size: 30px
+      line-height: 40px
+    @media (max-width: $media-mobile)
+      font-size: 24px
+      line-height: 32px
+      text-align: center
+  &__info
+    display: flex
+    width: 360px
+    margin: 0 0 45px 10px
+    align-items: flex-start
+    flex-direction: column
+    font-family: $font-secondary
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    color: $light
+    @media (max-width: $media-tablet)
+      margin-left: 6px
+      font-family: $font-secondary
+      font-size: 16px
+      line-height: 19px
+    @media (max-width: $media-mobile)
+      width: auto
+      margin-left: 20px
+  &__email
+    display: flex
+    align-items: center
+    color: $light
+    transition: 0.3s
+    @media (max-width: $media-tablet)
+      margin-top: 20px
+    @media (max-width: $media-mobile)
+      margin-top: 11px
+  &__adress
+    @media (max-width: $media-mobile)
+      margin-bottom: 18px
+  &__phone
+    color: $light
+    text-decoration: none
+    @media (max-width: $media-tablet)
+      margin-bottom: 0
+  &__adress, &__phone
+    display: flex
+    margin-bottom: 26px
+    align-items: center
+    transition: 0.3s
+    @media (max-width: $media-tablet)
+      margin-top: 0
+  &__email:hover, &__phone:hover, &__icon-phone:hover, &__icon-mail:hover
+    color: $primary-light
+    fill: $primary-light
+  &__icon-phone, &__icon-mail, &__icon-map
+    width: 35px
+    height: 35px
+    margin-right: 28px
+    fill: $primary
+    transition: 0.3s
+    @media (max-width: $media-tablet)
+      fill: $light
+    @media (max-width: $media-mobile)
+      flex: none
+      width: 41px
+      height: 41px
+      margin-right: 28px
+      fill: $primary
+  &__adress, &__phone, &__email
+    @media (max-width: $media-mobile)
+      font-family: $font-secondary
+      font-weight: 400
+      font-size: 14px
+      line-height: 17px
+  &__column
+    @media (max-width: $media-tablet)
+      padding-left: 27px
+    @media (max-width: $media-mobile)
+      padding-left: 0
+.map
+  width: 749px
+  height: 463px
+  background: $black
+  overflow: hidden
+  @media (max-width: $media-tablet)
+    width: 50%
+    height: 368px
+  @media (max-width: $media-mobile)
+    max-width: fit-content
+    width: 100%
+    height: 141px
+    padding-bottom: 45%

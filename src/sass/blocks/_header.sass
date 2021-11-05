@@ -1,0 +1,213 @@
+.header
+  position: fixed
+  left: 0
+  top: 0
+  right: 0
+  z-index: 4
+  background-color: $primary
+  transition: .4s
+  @media (max-width: $media-tablet)
+    min-width: 768px
+    &__logo
+      width: 222px
+      height: 50px
+    &__logo-link
+      display: block
+  @media (max-width: $media-mobile)
+    min-width: 320px
+    &__toggle
+      display: block
+    &__menu
+      display: none
+    &__logo-link
+      display: block
+      width: 151px
+      height: 34px
+      margin-right: 0
+  &__wrapper
+    display: flex
+    max-width: 1140px
+    width: 100%
+    margin: auto
+    padding: 35px 0
+    align-items: center
+    justify-content: space-between
+    @media (max-width: $media-tablet)
+      margin: 0
+      padding-left: 31px
+      padding-right: 20px
+      padding-bottom: 20px
+    @media (max-width: $media-mobile)
+      width: 100%
+      padding-left: 20px
+      padding-right: 10px
+      padding-top: 10px
+    &-navigation
+      display: flex
+      width: 100%
+      margin-left: auto
+      align-items: center
+      justify-content: flex-end
+      @media (max-width: $media-mobile)
+        display: none
+      &.active
+        position: absolute
+        top: 100%
+        left: 0
+        display: block
+        width: 100%
+        padding: 10px 0 30px 30px
+        background: $dark
+  &__social
+    display: flex
+    margin-left: 30px
+    @media (max-width: $media-tablet)
+      display: none
+    @media (max-width: $media-mobile)
+      display: block !important
+      width: 100%
+      margin-left: 0
+      padding-top: 20px
+.social-link
+  margin-right: 30px
+  fill: $light
+  &:hover
+    fill: $dark
+  @media (max-width: $media-mobile)
+  &:hover
+    fill: $primary
+.social-fb
+  width: 30px
+  height: 31px
+.social-vk
+  width: 34px
+  height: 35px
+.navigation
+  @media (max-width: $media-tablet)
+    margin-left: 0
+  @media (max-width: $media-mobile)
+    &.active
+      display: block
+  &__list
+    display: flex
+    padding-left: 0
+    padding-right: 4px
+    align-items: center
+    justify-content: space-between
+    @media (max-width: $media-tablet)
+      margin-left: 0
+    @media (max-width: $media-mobile)
+      display: block
+      left: 0
+      top: 100%
+      width: 100%
+      padding-left: 0
+      margin-top: 0
+  &__item
+    display: flex
+    align-items: center
+    @media (max-width: $media-mobile)
+      margin-top: 20px
+  &__item:not(:last-child):after
+    content: ""
+    margin-left: 28px
+    margin-right: 25px
+    display: inline-block
+    height: 15px
+    border: 1px solid $light
+    border-radius: 2px
+    transform: skew(330deg, 0)
+    @media (max-width: $media-tablet)
+      margin-left: 10px
+      margin-right: 10px
+    @media (max-width: $media-mobile)
+      display: none
+  &__link
+    color: $light
+    font-family: $font-secondary
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    text-decoration: none
+    text-transform: uppercase
+    border-bottom: 2px solid transparent
+    transition: 0.3s
+    cursor: pointer
+    &:hover
+      border-bottom: 2px solid $light
+      transition: 0.3s
+.menu-toggle
+  display: none
+.js-header--dark
+  background-color: $dark
+  .navigation__item:after
+    border: 1px solid $primary
+  .social-link:hover
+    fill: $primary
+@media (max-width: $media-mobile)
+  .hamburger
+    padding: 15px 0 0 15px
+    display: inline-block
+    margin: 0
+    color: inherit
+    font: inherit
+    text-transform: none
+    background-color: transparent
+    border: 0
+    overflow: visible
+    transition-property: opacity, filter
+    transition-duration: 0.15s
+    transition-timing-function: linear
+    cursor: pointer
+  .hamburger:hover
+    opacity: 0.7
+  .hamburger.active:hover
+    opacity: 0.7
+  .hamburger.active .hamburger-inner,
+  .hamburger.active .hamburger-inner::before,
+  .hamburger.active .hamburger-inner::after
+    background-color: $light
+  .hamburger-box
+    position: relative
+    display: inline-block
+    width: 40px
+    height: 24px
+  .hamburger-inner
+    top: 50%
+    display: block
+    margin-top: -2px
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after
+    position: absolute
+    width: 30px
+    height: 4px
+    background-color: $light
+    border-radius: 4px
+    transition-property: transform
+    transition-duration: 0.15s
+    transition-timing-function: ease
+  .hamburger-inner::before, .hamburger-inner::after
+    content: ""
+    display: block
+  .hamburger-inner::before
+    top: -10px
+  .hamburger-inner::after
+    bottom: -10px
+  .hamburger--squeeze .hamburger-inner
+    transition-duration: 0.075s
+    transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  .hamburger--squeeze .hamburger-inner::before
+    transition: top 0.075s 0.12s ease, opacity 0.075s ease
+  .hamburger--squeeze .hamburger-inner::after
+    transition: bottom 0.075s 0.12s ease, transform 0.075s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+  .hamburger--squeeze.active .hamburger-inner
+    transform: rotate(45deg)
+    transition-delay: 0.12s
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+  .hamburger--squeeze.active .hamburger-inner::before
+    top: 0
+    opacity: 0
+    transition: top 0.075s ease, opacity 0.075s 0.12s ease
+  .hamburger--squeeze.active .hamburger-inner::after
+    bottom: 0
+    transform: rotate(-90deg)
+    transition: bottom 0.075s ease, transform 0.075s 0.12s cubic-bezier(0.215, 0.61, 0.355, 1)

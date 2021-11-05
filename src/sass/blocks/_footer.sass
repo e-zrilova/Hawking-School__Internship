@@ -1,0 +1,53 @@
+.footer
+  padding: 34px 0
+  background-color: $primary
+  @media (max-width: $media-tablet)
+    padding-top: 14px
+    padding-bottom: 14px
+  &__wrapper
+    display: flex
+    max-width: 1114px
+    margin: auto
+    align-items: center
+    justify-content: space-between
+
+    @media (max-width: $media-tablet)
+      padding-left: 32px
+      padding-right: 30px
+  &__copyright
+    font-family: $font-secondary
+    font-weight: 400
+    font-size: 18px
+    line-height: 22px
+    color: $light
+    @media (max-width: $media-tablet)
+      width: 220px
+      font-size: 16px
+      line-height: 19px
+      text-align: right
+    @media (max-width: $media-mobile)
+      margin-left: auto
+      margin-right: auto
+      font-size: 12px
+      line-height: 14px
+      text-align: center
+  &__company-link
+    color: $light
+    &:hover
+      border-bottom: 2px solid $light
+      transition: 0.4ms
+      cursor: pointer
+  &__social
+    display: none
+    @media (max-width: $media-tablet)
+      display: block
+      margin-left: 9px
+    @media (max-width: $media-mobile)
+      display: none
+  &__logo
+    @media (max-width: $media-tablet)
+      width: 222px
+      height: 50px
+    &-link
+      @media (max-width: $media-mobile)
+        display: none

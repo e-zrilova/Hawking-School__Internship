@@ -1,0 +1,69 @@
+.about-us
+  position: relative
+  display: flex
+  padding: 184px 0 156px 0
+  align-items: center
+  color: $light
+  background: url(../img/description.jpg) center center/cover no-repeat
+  border-top: 5px solid $primary
+  border-bottom: 2px solid $primary
+  @media (max-width: $media-tablet)
+    padding-top: 44px
+    padding-bottom: 40px
+  @media (max-width: $media-mobile)
+    padding-top: 64px
+    margin-right: 0px
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.7)
+  &__container
+    position: relative
+    z-index: 2
+    display: flex
+    @media (max-width: $media-mobile)
+      width: 708px
+  &__title
+    margin-top: 0
+    font-weight: 800
+    font-size: 48px
+    line-height: 64px
+    text-transform: uppercase
+    @media (max-width: $media-tablet)
+      font-size: 30px
+      line-height: 40px
+    @media (max-width: $media-mobile)
+      margin-bottom: 20px
+      font-size: 24px
+      line-height: 32px
+  &__text
+    display: inline-block
+    max-width: 724px
+    margin-right: 145px
+    font-weight: 700
+    font-size: 24px
+    line-height: 36px
+    @media (max-width: $media-tablet)
+      margin-right: 13px
+      margin-top: 0
+      font-size: 18px
+      line-height: 30px
+    @media (max-width: $media-mobile)
+      margin-right: 0
+      font-size: 12px
+      line-height: 18px
+  &__img
+    @media (max-width: $media-tablet)
+      max-width: 266px
+      max-height: 376px
+    @media (max-width: $media-mobile)
+      display: none
+  &__content
+    @media (max-width: $media-tablet)
+      padding-top: 17px

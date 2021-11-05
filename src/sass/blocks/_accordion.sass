@@ -1,0 +1,179 @@
+.accordion
+    padding: 35px 35px 85px 35px
+    color: $light
+    background-color: $dark
+    border-bottom: $primary solid 5px
+    @media (max-width: $media-mobile)
+        padding: 20px
+    &__body
+        &-list
+            display: inline-block
+            padding: 0
+            margin: 0
+            columns: 2
+            column-gap: 80px
+            @media (max-width: $media-tablet)
+                column-gap: 37px
+            @media (max-width: $media-mobile)
+                display: flex
+                flex-direction: column
+                align-items: flex-start
+        &-item
+            max-width: 320px
+            margin-bottom: 30px
+            font-weight: 500
+            font-size: 30px
+            line-height: 48px
+            letter-spacing: 1.2px
+            @media (max-width: $media-tablet)
+                margin-bottom: 14px
+                font-size: 18px
+                text-align: center
+            @media (max-width: $media-mobile)
+                margin-bottom: 0
+                font-size: 14px
+        &-strong
+            margin-right: 20px
+            text-transform: uppercase
+            font-weight: 800
+            font-size: 24px
+            line-height: 48px
+            letter-spacing: 1.2px
+            @media (max-width: $media-tablet)
+                margin-right: 33px
+                font-size: 18px
+            @media (max-width: $media-mobile)
+                margin-right: 15px
+                font-size: 14px
+        &-btn
+            z-index: 3
+            display: flex
+            margin: 0 auto 0 0
+            @media (max-width: $media-tablet)
+                margin-left: 4%
+                margin-bottom: 3%
+                font-weight: 800
+                font-size: 18px
+                line-height: 48px
+                letter-spacing: 1.2px
+                transform: translateY(-25%)
+            @media (max-width: $media-mobile)
+                margin-left: 0
+                font-size: 14px
+                letter-spacing: 0.5px
+            &:hover
+                transform: scale(1.2)
+        &-mobile
+            @media (max-width: $media-mobile)
+                display: none
+    &__title
+        display: flex
+        margin: 0
+        padding: 27px 27px 27px 31px
+        font-weight: 500
+        font-size: 30px
+        line-height: 37px
+        align-items: center
+        border: $primary solid 5px
+        cursor: pointer
+        @media (max-width: $media-tablet)
+            padding-left: 22px
+            font-size: 24px
+            line-height: 29px
+            border-width: 2px
+        @media (max-width: $media-mobile)
+            padding-top: 18px
+            padding-bottom: 18px
+            font-size: 16px
+            line-height: 20px
+            border-width: 1px
+            &::before
+                width: 26px
+                height: 27px
+                padding-right: 30px
+            &.active::before
+                width: 26px
+                height: 27px
+                padding-right: 39px
+        &:not(:first-child)
+            border-top: none
+        &.active
+            background-color: $dark
+            border-bottom: none
+        &.active:not(:first-child)
+            border-top: none
+        &.active .accordion-icon:before
+            transform: translate(-50%, -50%) rotate(90deg)
+    &__content
+        display: none
+        &.active
+            display: block
+            margin: 0
+            padding: 17px 0 39px 128px
+            border: $primary solid 5px
+            border-top: none
+            @media (max-width: $media-tablet)
+                padding-left: 88px
+                padding-top: 9px
+                padding-bottom: 9px
+                border-width: 2px
+            @media (max-width: $media-mobile)
+                padding-left: 22%
+                border-width: 1px
+                border-top: none
+    &-icon
+        position: relative
+        display: block
+        width: 60px
+        height: 60px
+        border-radius: 50%
+        margin-right: 38px
+        background-color: $primary
+        transition: 0.3s
+        @media (max-width: $media-tablet)
+            width: 27px
+            height: 27px
+        &:hover
+            background-color: $light
+        &:after
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 28px
+            height: 6px
+            background-color: $dark
+            border-radius: 4px
+            transform: translate(-50%, -50%)
+            @media (max-width: $media-tablet)
+                width: 13px
+                height: 3px
+        &:before
+            content: ""
+            position: absolute
+            top: 50%
+            left: 50%
+            width: 6px
+            height: 28px
+            background-color: $dark
+            border-radius: 4px
+            transform: translate(-50%, -50%)
+            transition: .3s
+            @media (max-width: $media-tablet)
+                width: 3px
+                height: 13px
+.main-title
+    margin-top: 16px
+    text-align: center
+    font-weight: 800
+    font-size: 60px
+    line-height: 79px
+    text-transform: uppercase
+    color: $light
+    @media (max-width: $media-tablet)
+        margin-top: 0
+        font-size: 36px
+        line-height: 48px
+    @media (max-width: $media-mobile)
+        font-size: 24px
+        line-height: 32px
